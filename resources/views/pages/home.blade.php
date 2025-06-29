@@ -1,62 +1,27 @@
 @extends('app')
 
-
-@section('styles')
+@push('styles')
 
 <style>
-      /* Main slider container */
-      .slider-outer {
-        width: 800px;
-        overflow: hidden;
-        position: relative;
-        height: 200px;
-      }
-      
-      /* Inner sliding track */
-      .slider-inner {
-        display: flex;
-        flex-direction: row;
-        position: absolute;
-        left: 0; 
-        top: 0;
-        width: 2400px; /* 3 slides */
-        transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-        will-change: transform;
-        height: 100%;
-      }
-      
-      /* Individual slide card */
-      .slide-card {
-        width: 800px;
-        flex-shrink: 0;
-        height: 200px;
-        display: flex;
-        align-items: center;
-        background: white;
-        border-radius: 0.75rem;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        padding: 1.5rem;
-        margin-right: 2rem;
-        transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-      }
-      
-      /* Next slides preview */
-      .next-slide {
-        transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-      }
-      
-      /* Animation classes */
-      .fade-out {
-        opacity: 0;
-        transform: translateY(10px);
-      }
-      .fade-in {
-        opacity: 0.7;
-        transform: translateY(0);
-      }
-    </style>
+@keyframes slideInLeft {
+    0% { transform: translateX(60px); opacity:0; }
+    100% { transform: translateX(0); opacity:1; }
+}
+@keyframes slideOutLeft {
+    0% { transform: translateX(0); opacity:1; }
+    100% { transform: translateX(-60px); opacity:0; }
+}
+@keyframes fadeInRight {
+    0% { transform: translateX(60px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+/* Animation classes */
+.animate-slideInLeft { animation: slideInLeft 0.6s both; }
+.animate-slideOutLeft { animation: slideOutLeft 0.6s both; }
+.animate-fadeInRight { animation: fadeInRight 0.6s both; }
+</style>
 
-@endsection
+@endpush
 
 @section('content')
 
@@ -657,186 +622,181 @@
             </p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6 p-4 md:p-0">
-            <!-- Left Column (smaller) -->
-            <div
-                class="bg-[#a6aef2] rounded-xl overflow-hidden flex flex-col relative"
-            >
-                <!-- Image container with optimized height -->
-                <div
-                    class="w-full pt-8 pb-0 h-[280px] sm:h-[350px] lg:h-[400px] xl:h-[480px] overflow-hidden relative"
-                >
+<div class="flex flex-col lg:flex-row gap-4 md:gap-6 p-4 md:p-0">
+    <!-- Left Column -->
+    <div class="bg-[#a6aef2] rounded-xl overflow-hidden flex flex-col w-full lg:w-[488px] lg:h-[635px]">
+        <!-- Image container -->
+        <div class="w-full aspect-[488/300] lg:h-[420px] overflow-hidden">
+            <img
+                src="{{ asset('assets/graphics/one.png') }}"
+                alt="Case study illustration"
+                class="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+                width="488"
+                height="300"
+            />
+        </div>
+
+        <!-- Text content -->
+        <div class="p-4 md:p-6 lg:px-8 lg:pb-8 flex flex-col flex-grow">
+            <h3 class="font-poppins text-lg text-t-first md:text-xl font-bold mb-2 md:mb-3">
+                We Share Real Case Studies, Not Just Theories
+            </h3>
+            <p class="text-sm text-t-first md:text-base font-light">
+                See how digital strategies are applied in real business
+                settings from growing website traffic to converting
+                leads into paying customers.
+            </p>
+        </div>
+    </div>
+
+    <!-- Right Content Area -->
+    <div class="flex flex-col gap-6 w-full lg:w-[712px]">
+        <!-- Top Row -->
+        <div class="bg-[#fdd8ce] rounded-xl overflow-hidden flex flex-col md:flex-row w-full h-auto md:h-[247px]">
+            <!-- Text content -->
+            <div class="w-full md:w-1/2 p-6 lg:p-8 flex flex-col justify-center">
+                <h3 class="text-xl md:text-2xl font-bold text-t-first mb-2 md:mb-4">
+                    Career Guidance That Starts Where You Are
+                </h3>
+                <p class="text-sm md:text-base text-t-first font-light">
+                    Each roadmap is created using up-to-date job data,
+                    salary trends, and hiring patterns from global
+                    companies, so you know exactly what skills matter.
+                </p>
+            </div>
+
+            <!-- Image container -->
+            <div class="w-full md:w-1/2 aspect-[356/247] md:h-full">
+                <img
+                    src="{{ asset('assets/graphics/three.png') }}"
+                    alt="E-commerce growth chart"
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                    decoding="async"
+                    width="356"
+                    height="247"
+                />
+            </div>
+        </div>
+
+        <!-- Bottom Row -->
+        <div class="flex flex-col sm:flex-row gap-6 w-full">
+            <!-- Left Card -->
+            <div class="bg-[#d0edfb] rounded-xl overflow-hidden flex flex-col w-full sm:w-1/2 lg:w-[347px] h-auto sm:h-[367px]">
+                <!-- Text -->
+                <div class="px-6 pt-6 lg:px-8 lg:pt-8 flex-grow sm:flex-grow-0 sm:h-1/2">
+                    <h4 class="text-lg md:text-xl font-bold text-t-first mb-2">
+                        No Sales Tricks or Hidden Funnels
+                    </h4>
+                    <p class="text-sm md:text-base text-t-first font-light">
+                        There's nothing to buy. No surprise paywalls.
+                        Just honest, practical content designed to help
+                        you grow your career.
+                    </p>
+                </div>
+                <!-- Image -->
+                <div class="w-full mt-4 aspect-[347/183.5] sm:h-1/2">
                     <img
-                        src="{{ asset('assets/graphics/one.png') }}"
-                        alt="Case study illustration"
-                        class="w-full h-full object-cover"
-                        width="488"
-                        height="500"
+                        src="{{ asset('assets/graphics/four.png') }}"
+                        alt="Content strategy results"
+                        class="w-full h-full object-cover object-top"
                         loading="lazy"
                         decoding="async"
+                        width="347"
+                        height="183.5"
                     />
-                </div>
-
-                <!-- Text content -->
-                <div class="p-4 md:p-6 lg:px-8 lg:pb-8 flex flex-col">
-                    <h3 class="text-lg text-t-first md:text-xl font-bold mb-2 md:mb-3">
-                        We Share Real Case Studies, Not Just Theories
-                    </h3>
-                    <p class="text-sm text-t-first md:text-base font-light">
-                        See how digital strategies are applied in real business
-                        settings from growing website traffic to converting
-                        leads into paying customers.
-                    </p>
                 </div>
             </div>
 
-            <!-- Right Column (larger - takes 2/3 space) -->
-            <div class="lg:col-span-2 space-y-4 md:space-y-6">
-                <!-- First Section - Full width text -->
-                <div
-                    class="bg-[#fdd8ce] rounded-xl overflow-hidden flex flex-col md:flex-row"
-                >
-                    <!-- Text content (left side) -->
-                    <div
-                        class="w-full md:w-1/2 p-4 md:p-6 lg:p-8 flex flex-col justify-center"
-                    >
-                        <h3
-                            class="text-xl md:text-2xl font-bold text-t-first mb-2 md:mb-4"
-                        >
-                            Career Guidance That Starts Where You Are
-                        </h3>
-                        <p
-                            class="text-sm md:text-base text-t-first font-light"
-                        >
-                            Each roadmap is created using up-to-date job data,
-                            salary trends, and hiring patterns from global
-                            companies, so you know exactly what skills matter.
-                        </p>
-                    </div>
-
-                    <!-- Image container (right side) -->
-                    <div class="w-full md:w-1/2 h-[180px] md:h-auto">
-                        <img
-                            src="{{ asset('assets/graphics/three.png') }}"
-                            alt="E-commerce growth chart"
-                            class="w-full h-full object-cover"
-                            width="406"
-                            height="247"
-                            loading="lazy"
-                            decoding="async"
-                        />
-                    </div>
+            <!-- Right Card -->
+            <div class="bg-[#d1fae5] rounded-xl overflow-hidden flex flex-col w-full sm:w-1/2 lg:w-[347px] h-auto sm:h-[367px]">
+                <!-- Image -->
+                <div class="w-full aspect-[347/183.5] sm:h-1/2">
+                    <img
+                        src="{{ asset('assets/graphics/two.png') }}"
+                        alt="SEO optimization"
+                        class="w-full h-full object-cover"
+                        loading="lazy"
+                        decoding="async"
+                        width="347"
+                        height="183.5"
+                    />
                 </div>
-
-                <!-- Second Section - 2-column grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                    <!-- Left Column - Text top, image bottom -->
-                    <div
-                        class="bg-[#d0edfb] rounded-xl overflow-hidden flex flex-col"
-                    >
-                        <div
-                            class="px-4 pt-4 md:px-6 md:pt-6 lg:px-8 lg:pt-8 flex-1"
-                        >
-                            <h4
-                                class="text-lg md:text-xl font-bold text-t-first mb-2"
-                            >
-                                No Sales Tricks or Hidden Funnels
-                            </h4>
-                            <p
-                                class="text-sm md:text-base text-t-first font-light"
-                            >
-                                There's nothing to buy. No surprise paywalls.
-                                Just honest, practical content designed to help
-                                you grow your career.
-                            </p>
-                        </div>
-                        <div class="w-full h-[150px] md:h-[180px] lg:h-[220px]">
-                            <img
-                                src="{{ asset('assets/graphics/four.png') }}"
-                                alt="Content strategy results"
-                                class="w-full h-full object-cover object-top"
-                                width="500"
-                                height="300"
-                                loading="lazy"
-                                decoding="async"
-                            />
-                        </div>
-                    </div>
-
-                    <!-- Right Column - Image top, text bottom -->
-                    <div
-                        class="bg-[#d1fae5] rounded-xl overflow-hidden flex flex-col"
-                    >
-                        <div class="w-full h-[150px] md:h-[180px] lg:h-[220px]">
-                            <img
-                                src="{{ asset('assets/graphics/two.png') }}"
-                                alt="SEO optimization"
-                                class="w-full h-full object-cover"
-                                width="347"
-                                height="317"
-                                loading="lazy"
-                                decoding="async"
-                            />
-                        </div>
-                        <div
-                            class="px-4 pb-4 pt-4 md:px-6 md:pb-6 md:pt-4 lg:px-8 lg:pt-6 lg:pb-8 flex-1"
-                        >
-                            <h4
-                                class="text-lg md:text-xl font-bold text-t-first mb-2 md:mb-3"
-                            >
-                                Human Insight + Smart Tools
-                            </h4>
-                            <p
-                                class="text-sm md:text-base text-t-first font-light"
-                            >
-                                We combine hands-on professional experience with
-                                modern tools, including AI-driven skill analysis
-                                and career mapping — so you're always learning
-                                what's relevant.
-                            </p>
-                        </div>
-                    </div>
+                <!-- Text -->
+                <div class="px-6 pb-6 pt-4 lg:px-8 lg:pt-6 lg:pb-8 flex-grow sm:flex-grow-0 sm:h-1/2">
+                    <h4 class="text-lg md:text-xl font-bold text-t-first mb-2 md:mb-3">
+                        Human Insight + Smart Tools
+                    </h4>
+                    <p class="text-sm md:text-base text-t-first font-light">
+                        We combine hands-on professional experience with
+                        modern tools, including AI-driven skill analysis
+                        and career mapping — so you're always learning
+                        what's relevant.
+                    </p>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
+
+    </div>
 </section>
 
-<section class="relative bg-cover bg-center" style="background-image: url('{{ asset('assets/face.png') }}')">
+<section
+    class="relative bg-cover bg-center"
+    style="background-image: url('{{ asset('assets/face.png') }}')"
+>
     <!-- Background overlay with lower opacity and proper z-index -->
     <div class="absolute inset-0 z-0 bg-gray-100/10"></div>
 
-    <div class="container mx-auto px-4 md:px-0 py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 2xl:py-24 z-10">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center relative">
+    <div
+        class="container mx-auto px-4 md:px-0 py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 2xl:py-24 z-10"
+    >
+        <div
+            class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center relative"
+        >
             <!-- Left Column -->
-            <!-- <div class="rounded-xl h-[490px] w-full lg:col-span-1 overflow-visible">
-                <div class="h-full w-full bg-c-main relative">
+
+            <div
+                class="bg-c-main ml-8 h-[550px] w-[calc(100%-15px)] lg:col-span-1 overflow-hidden"
+            >
+                <div class="absolute left-[-20px] h-[550px] w-[560px] py-10">
                     <img
                         src="{{ asset('assets/rohit.png') }}"
                         alt="Decorative element"
-                        class="absolute top-0 w-[400px] h-[500px] object-contain"
+                        class="h-full w-full object-contain"
                     />
-                </div>
-            </div> -->
-
-            <div class="bg-c-main ml-8 h-[550px] w-[calc(100%-15px)] lg:col-span-1 overflow-hidden">
-                <div class="absolute left-[-20px] h-[550px] w-[560px] py-10">
-                    <img src="{{ asset('assets/rohit.png') }}" alt="Decorative element" class="h-full w-full object-contain">
                 </div>
             </div>
 
             <!-- Right Column -->
             <div class="lg:col-span-2">
                 <div class="ml-32">
-                    <h2 class="font-poppins font-medium text-[36px] leading-[48px] tracking-[-0.02em] text-t-first mb-4">
+                    <h2
+                        class="font-poppins font-medium text-[36px] leading-[48px] tracking-[-0.02em] text-t-first mb-4"
+                    >
                         Created by Someone Who's Been in Your Shoes
                     </h2>
-                    <p class="font-roboto font-light text-[20px] leading-[30px] tracking-[0.02em] text-t-first mb-6">
-                        CareerIntoIT is <span class="font-normal bg-[#e1c6bd]">founded by Rohit Rajput</span>, a digital marketing strategist with real-world experience in SEO, content, and growth campaigns. 
+                    <p
+                        class="font-roboto font-light text-[20px] leading-[30px] tracking-[0.02em] text-t-first mb-6"
+                    >
+                        CareerIntoIT is
+                        <span class="font-normal bg-[#e1c6bd]"
+                            >founded by Rohit Rajput</span
+                        >, a digital marketing strategist with real-world
+                        experience in SEO, content, and growth campaigns.
                         <br /><br />
-                        Having worked with businesses across industries and mentored newcomers into tech, Rohit built this platform to make your career journey easier, clearer, and more focused — no matter where you're starting.
+                        Having worked with businesses across industries and
+                        mentored newcomers into tech, Rohit built this platform
+                        to make your career journey easier, clearer, and more
+                        focused — no matter where you're starting.
                     </p>
-                    <button class="bg-c-main hover:bg-[#f85a2a] text-white font-semibold w-[233px] h-[56px] px-8 py-[14px] rounded-[16px] gap-2 relative z-20 transition-colors duration-300">
+                    <button
+                        class="bg-c-main hover:bg-[#f85a2a] text-white font-semibold w-[233px] h-[56px] px-8 py-[14px] rounded-[16px] gap-2 relative z-20 transition-colors duration-300"
+                    >
                         Meet Rohit Rajput
                     </button>
                 </div>
@@ -850,392 +810,334 @@
         class="container mx-auto px-4 md:px-0 py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 2xl:py-24"
     >
         <div
-            class="flex flex-col gap-4 sm:gap-6 lg:flex-row lg:justify-between lg:gap-12 pb-8 md:pb-10 lg:pb-16 xl:pb-20 2xl:pb-24"
+            class="flex flex-col gap-4 sm:gap-6 lg:flex-row lg:justify-between lg:gap-12"
         >
             <div class="lg:w-[40%]">
-                <h2 class="font-poppins font-medium text-[36px] leading-[48px] tracking-[-0.02em] text-t-first">
+                <h2
+                    class="font-poppins font-medium text-[36px] leading-[48px] tracking-[-0.02em] text-t-first"
+                >
                     Got any question
                 </h2>
-                <p class="font-roboto font-light text-[20px] leading-[27px] tracking-[0.02em] text-t-second mt-4">
-                    We've helped hundreds of people who felt the same way. So before you decide, here are the answers to the most common questions — answered with honesty, not hype.
+                <p
+                    class="font-roboto font-light text-[20px] leading-[27px] tracking-[0.02em] text-t-second mt-4"
+                >
+                    We've helped hundreds of people who felt the same way. So
+                    before you decide, here are the answers to the most common
+                    questions — answered with honesty, not hype.
                 </p>
             </div>
 
-
-            <div class="text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 font-light max-w-prose lg:w-[50%]">
-                <!-- Accordion Item 1 -->
-                <div class="overflow-hidden transition-all duration-300">
-                    <input
-                        type="checkbox"
-                        id="accordion-1"
-                        class="hidden peer"
-                        checked
-                    />
-                    <label
-                        for="accordion-1"
-                        class="flex justify-between items-center p-5 cursor-pointer bg-gray-50 hover:bg-white transition-colors duration-200 peer-checked:bg-white peer-checked:text-c-main"
-                    >
-                    <h2 class="font-poppins font-medium text-[18px] leading-[28px] tracking-[0]">
-                        Do I need experience or a tech background to start?
-                    </h2>
-                        <svg
-                            class="w-6 h-6 text-gray-600 transition-all duration-300 transform peer-checked:rotate-180 peer-checked:text-c-main"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M19 9l-7 7-7-7"
-                            />
-                        </svg>
-                    </label>
-                    <div
-                        class="overflow-hidden transition-all duration-300 max-h-0 peer-checked:max-h-96 peer-checked:bg-white"
-                    >
-                        <div class="p-5 pt-0 text-gray-600">
-                            <p class="font-poppins font-light text-[16px] leading-[26px] tracking-[0.02em]">
-                                Not at all. In fact, CareerIntoIT was built for people with no prior experience. Whether you're in retail, hospitality, or just out of uni, we'll help you understand exactly where to begin and what skills matter most.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Accordion Item 2 -->
-                <div class="overflow-hidden transition-all duration-300">
-                    <input
-                        type="checkbox"
-                        id="accordion-2"
-                        class="hidden peer"
-                    />
-                    <label
-                        for="accordion-2"
-                        class="flex justify-between items-center p-5 cursor-pointer bg-gray-50 hover:bg-white transition-colors duration-200 peer-checked:bg-white peer-checked:text-c-main"
-                    >
-                        <h2 class="text-lg font-semibold text-gray-800">
-                            How is this roadmap different from other free guides?
-                        </h2>
-                        <svg
-                            class="w-6 h-6 text-gray-600 transition-all duration-300 transform peer-checked:rotate-180 peer-checked:text-c-main"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M19 9l-7 7-7-7"
-                            />
-                        </svg>
-                    </label>
-                    <div
-                        class="overflow-hidden transition-all duration-300 max-h-0 peer-checked:max-h-96 peer-checked:bg-white"
-                    >
-                        <div class="p-5 pt-0 text-gray-600">
-                            <p>
-                                Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex
-                                ea commodo consequat.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Accordion Item 3 -->
-                <div class="overflow-hidden transition-all duration-300">
-                    <input
-                        type="checkbox"
-                        id="accordion-3"
-                        class="hidden peer"
-                    />
-                    <label
-                        for="accordion-3"
-                        class="flex justify-between items-center p-5 cursor-pointer bg-gray-50 hover:bg-white transition-colors duration-200 peer-checked:bg-white peer-checked:text-c-main"
-                    >
-                        <h2 class="text-lg font-semibold text-gray-800">
-                            What if I'm already working or studying full-time?
-                        </h2>
-                        <svg
-                            class="w-6 h-6 text-gray-600 transition-all duration-300 transform peer-checked:rotate-180 peer-checked:text-c-main"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M19 9l-7 7-7-7"
-                            />
-                        </svg>
-                    </label>
-                    <div
-                        class="overflow-hidden transition-all duration-300 max-h-0 peer-checked:max-h-96 peer-checked:bg-white"
-                    >
-                        <div class="p-5 pt-0 text-gray-600">
-                            <p>
-                                Duis aute irure dolor in reprehenderit in
-                                voluptate velit esse cillum dolore eu fugiat
-                                nulla pariatur.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Accordion Item 4 -->
-                <div class="overflow-hidden transition-all duration-300">
-                    <input
-                        type="checkbox"
-                        id="accordion-4"
-                        class="hidden peer"
-                    />
-                    <label
-                        for="accordion-4"
-                        class="flex justify-between items-center p-5 cursor-pointer bg-gray-50 hover:bg-white transition-colors duration-200 peer-checked:bg-white peer-checked:text-c-main"
-                    >
-                        <h2 class="text-lg font-semibold text-gray-800">
-                            I'm not sure which digital career is right for me. Can you help?
-                        </h2>
-                        <svg
-                            class="w-6 h-6 text-gray-600 transition-all duration-300 transform peer-checked:rotate-180 peer-checked:text-c-main"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M19 9l-7 7-7-7"
-                            />
-                        </svg>
-                    </label>
-                    <div
-                        class="overflow-hidden transition-all duration-300 max-h-0 peer-checked:max-h-96 peer-checked:bg-white"
-                    >
-                        <div class="p-5 pt-0 text-gray-600">
-                            <p>
-                                Duis aute irure dolor in reprehenderit in
-                                voluptate velit esse cillum dolore eu fugiat
-                                nulla pariatur.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+<div class="text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 font-light max-w-prose lg:w-[50%]">
+    <!-- Accordion Item 1 -->
+    <div class="overflow-hidden transition-all duration-300 mb-1 rounded-lg">
+        <input
+            type="checkbox"
+            id="accordion-1"
+            class="hidden peer"
+            checked
+        />
+        <label
+            for="accordion-1"
+            class="flex justify-between items-center p-5 cursor-pointer bg-gray-50 hover:bg-white transition-all duration-200 peer-checked:bg-white peer-checked:text-c-main"
+        >
+            <h2 class="font-poppins font-medium text-[18px] leading-[28px] tracking-[0]">
+                Do I need experience or a tech background to start?
+            </h2>
+            <svg
+                class="w-6 h-6 text-gray-600 transition-all duration-300 transform peer-checked:rotate-180 peer-checked:text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                />
+            </svg>
+        </label>
+        <div
+            class="overflow-hidden transition-all duration-300 max-h-0 peer-checked:max-h-[500px] bg-white"
+        >
+            <div class="p-5 pt-0 text-gray-600">
+                <p class="font-poppins font-light text-[16px] leading-[26px] tracking-[0.02em]">
+                    Not at all. In fact, CareerIntoIT was built for
+                    people with no prior experience. Whether you're
+                    in retail, hospitality, or just out of uni,
+                    we'll help you understand exactly where to begin
+                    and what skills matter most.
+                </p>
             </div>
+        </div>
+    </div>
 
+    <!-- Accordion Item 2 -->
+    <div class="overflow-hidden transition-all duration-300 mb-1 rounded-lg">
+        <input
+            type="checkbox"
+            id="accordion-2"
+            class="hidden peer"
+        />
+        <label
+            for="accordion-2"
+            class="flex justify-between items-center p-5 cursor-pointer bg-gray-50 hover:bg-white transition-all duration-200 peer-checked:bg-white peer-checked:text-c-main"
+        >
+            <h2 class="font-poppins font-medium text-[18px] leading-[28px] tracking-[0]">
+                How is this roadmap different from other free guides?
+            </h2>
+            <svg
+                class="w-6 h-6 text-gray-600 transition-all duration-300 transform peer-checked:rotate-180 peer-checked:text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                />
+            </svg>
+        </label>
+        <div
+            class="overflow-hidden transition-all duration-300 max-h-0 peer-checked:max-h-[500px] bg-white"
+        >
+            <div class="p-5 pt-0 text-gray-600">
+                <p class="font-poppins font-light text-[16px] leading-[26px] tracking-[0.02em]">
+                    Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex
+                    ea commodo consequat.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Accordion Item 3 -->
+    <div class="overflow-hidden transition-all duration-300 mb-1 rounded-lg">
+        <input
+            type="checkbox"
+            id="accordion-3"
+            class="hidden peer"
+        />
+        <label
+            for="accordion-3"
+            class="flex justify-between items-center p-5 cursor-pointer bg-gray-50 hover:bg-white transition-all duration-200 peer-checked:bg-white peer-checked:text-c-main"
+        >
+            <h2 class="font-poppins font-medium text-[18px] leading-[28px] tracking-[0]">
+                What if I'm already working or studying full-time?
+            </h2>
+            <svg
+                class="w-6 h-6 text-gray-600 transition-all duration-300 transform peer-checked:rotate-180 peer-checked:text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                />
+            </svg>
+        </label>
+        <div
+            class="overflow-hidden transition-all duration-300 max-h-0 peer-checked:max-h-[500px] bg-white"
+        >
+            <div class="p-5 pt-0 text-gray-600">
+                <p class="font-poppins font-light text-[16px] leading-[26px] tracking-[0.02em]">
+                    Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat
+                    nulla pariatur.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Accordion Item 4 -->
+    <div class="overflow-hidden transition-all duration-300 mb-1 rounded-lg">
+        <input
+            type="checkbox"
+            id="accordion-4"
+            class="hidden peer"
+        />
+        <label
+            for="accordion-4"
+            class="flex justify-between items-center p-5 cursor-pointer bg-gray-50 hover:bg-white transition-all duration-200 peer-checked:bg-white peer-checked:text-c-main"
+        >
+            <h2 class="font-poppins font-medium text-[18px] leading-[28px] tracking-[0]">
+                I'm not sure which digital career is right for me. Can you help?
+            </h2>
+            <svg
+                class="w-6 h-6 text-gray-600 transition-all duration-300 transform peer-checked:rotate-180 peer-checked:text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                />
+            </svg>
+        </label>
+        <div
+            class="overflow-hidden transition-all duration-300 max-h-0 peer-checked:max-h-[500px] bg-white"
+        >
+            <div class="p-5 pt-0 text-gray-600">
+                <p class="font-poppins font-light text-[16px] leading-[26px] tracking-[0.02em]">
+                    Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat
+                    nulla pariatur.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 
         </div>
     </div>
 </section>
 
 
-<section class="flex flex-col items-center justify-center min-h-screen">
-    <div class="container mx-auto flex flex-row items-center gap-8 overflow-hidden relative"
-        style="max-width: 1200px;" id="testimonial-slider">
-    
-    <!-- Main Slider -->
-    <div class="slider-outer" id="slider-outer"
-            onmouseenter="pauseAuto()" onmouseleave="resumeAuto()">
-        <div class="slider-inner" id="slider-inner"></div>
+<section class="bg-[#fff4f0] py-24">
+    <div class="container mx-auto flex flex-col">
+    <!-- Main slider grid -->
+    <div class="flex w-full p-4 gap-6 rounded-lg">
+        <!-- Left Main Testimonial -->
+        <div id="main" class="flex items-center gap-4 w-[70%] transition-all duration-700">
+        <img id="main-img" src="https://randomuser.me/api/portraits/men/32.jpg" class="h-28 w-28 rounded-md object-cover bg-purple-300 shadow-lg transition-all duration-700" />
+        <div>
+            <p id="main-text" class="text-gray-700 font-medium text-lg"></p>
+            <span id="main-name" class="block text-gray-500 italic text-sm mt-3"></span>
+        </div>
+        </div>
+        <!-- Right Side Queue -->
+        <div class="flex flex-col justify-between w-[30%]">
+        <div id="queue" class="flex justify-end gap-4 mb-4 transition-all duration-700"></div>
+        </div>
     </div>
-    
-    <!-- Next Slides Preview -->
-    <div class="flex flex-col items-center">
-        <div class="flex gap-4" id="next-cards"></div>
+    <!-- Controls below grid, aligned right -->
+    <div class="flex w-full justify-end pt-3">
+        <div class="flex gap-3">
+        <button onclick="prevTestimonial()" class="border border-orange-300 rounded-full p-2 flex items-center hover:bg-orange-100 transition"><span>&#8592;</span></button>
+        <button onclick="nextTestimonial()" class="border border-orange-300 rounded-full p-2 flex items-center hover:bg-orange-100 transition"><span>&#8594;</span></button>
+        </div>
     </div>
-    </div>
-    
-    <!-- Navigation Arrows -->
-    <div class="container mx-auto flex gap-4 mt-6 justify-end w-full" style="max-width:1200px;">
-    <button onclick="prevSlide()"
-            class="px-4 py-2 rounded-full border border-orange-400 text-orange-400 hover:bg-orange-50 transition-all duration-300">
-        &larr;
-    </button>
-    <button onclick="nextSlide()"
-            class="px-4 py-2 rounded-full border border-orange-400 text-orange-400 hover:bg-orange-50 transition-all duration-300">
-        &rarr;
-    </button>
     </div>
 </section>
 
-@endsection @section('scripts')
+
+@endsection 
+
+
+@push('scripts')
 
 <script>
-    document
-        .querySelectorAll('.accordion input[type="checkbox"]')
-        .forEach((checkbox) => {
-            checkbox.addEventListener("change", function () {
-                if (this.checked) {
-                    // Uncheck all other accordions
-                    document
-                        .querySelectorAll('.accordion input[type="checkbox"]')
-                        .forEach((otherCheckbox) => {
-                            if (otherCheckbox !== this) {
-                                otherCheckbox.checked = false;
-                            }
-                        });
-                }
-            });
+document.addEventListener('DOMContentLoaded', function() {
+    const accordionItems = document.querySelectorAll('input[type="checkbox"][id^="accordion-"]');
+    
+    accordionItems.forEach(item => {
+        item.addEventListener('change', function() {
+            if (this.checked) {
+                // Close all other accordions
+                accordionItems.forEach(otherItem => {
+                    if (otherItem !== this) {
+                        otherItem.checked = false;
+                    }
+                });
+                
+                // Smooth scroll to the opened accordion
+                this.closest('.overflow-hidden').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest'
+                });
+            }
         });
+    });
+});
 </script>
 
 <script>
-      // Testimonial data
-      const testimonials = [
-        {
-          img: "{{ asset('assets/run.jpeg') }}",
-          text: "“I used to think SEO was just about keywords — now I've helped my cousin's business rank on Google. This roadmap made it click for me.”",
-          author: "Nishant, First-Year Uni Student"
-        },
-        {
-          img: "{{ asset('assets/run.jpeg') }}",
-          text: "“Slider testimonial 2 here. Add more user quotes as you like.”",
-          author: "Other Student"
-        },
-        {
-          img: "{{ asset('assets/run.jpeg') }}",
-          text: "“Slider testimonial 3 here. More content as needed.”",
-          author: "Another User"
-        }
-      ];
+const testimonials = [
+  {
+    img: "https://randomuser.me/api/portraits/men/32.jpg",
+    text: `"I used to think SEO was just about keywords — now I’ve helped my cousin’s business rank on Google. This roadmap made it click for me."`,
+    name: "Nishant, First-Year Uni Student",
+  },
+  {
+    img: "https://randomuser.me/api/portraits/men/68.jpg",
+    text: `"Great explanations, real-life examples. Now I am teaching my friends SEO!"`,
+    name: "Rohan, Business Student",
+  },
+  {
+    img: "https://randomuser.me/api/portraits/women/65.jpg",
+    text: `"Everything suddenly made sense. I landed my first internship because of this course."`,
+    name: "Priya, Marketing Intern",
+  },
+];
 
-      // Slider state
-      let current = 0;
-      let sliding = false;
-      let auto = null;
-      let autoOn = true;
+let current = 0;
 
-      // Helper function to get circular index
-      function getIdx(idx) {
-        return (idx + testimonials.length) % testimonials.length;
-      }
+function animateTestimonial(next) {
+  const main = document.getElementById('main');
+  // Animate current main out
+  main.classList.add('animate-slideOutLeft');
+  setTimeout(() => {
+    // Set new main content
+    document.getElementById('main-img').src = testimonials[next].img;
+    document.getElementById('main-text').innerText = testimonials[next].text;
+    document.getElementById('main-name').innerText = testimonials[next].name;
+    // Animate main in
+    main.classList.remove('animate-slideOutLeft');
+    main.classList.add('animate-slideInLeft');
+    setTimeout(() => {
+      main.classList.remove('animate-slideInLeft');
+    }, 600);
+  }, 600);
+}
 
-      // Render slides with smooth transitions
-      function renderSlides(immediate = false) {
-        const prev = getIdx(current - 1);
-        const curr = current;
-        const next = getIdx(current + 1);
+function updateQueueAnimated(next) {
+  let q1 = (next + 1) % testimonials.length;
+  let q2 = (next + 2) % testimonials.length;
+  const queueDiv = document.getElementById('queue');
+  queueDiv.innerHTML = `
+    <img id="queue1" src="${testimonials[q1].img}" class="h-24 w-24 rounded-md object-cover grayscale bg-gray-200 shadow opacity-0" />
+    <img id="queue2" src="${testimonials[q2].img}" class="h-24 w-24 rounded-md object-cover grayscale bg-gray-200 shadow opacity-0" />
+  `;
+  // Animate both right side images with fade/slide from right to left
+  setTimeout(() => {
+    document.getElementById('queue1').classList.add('animate-fadeInRight');
+    document.getElementById('queue2').classList.add('animate-fadeInRight');
+  }, 20);
+}
 
-        const sliderInner = document.getElementById('slider-inner');
-        
-        // Create slides with different states
-        sliderInner.innerHTML = `
-          ${[prev, curr, next].map((i, idx) => `
-            <div class="slide-card">
-              <img src="${testimonials[i].img}" alt="User ${idx+1}"
-                   class="w-32 h-32 rounded-lg object-cover mr-6 transition-all duration-500 ${
-                     idx === 1 ? 'grayscale-0 scale-105 ring-4 ring-purple-200' : 'grayscale scale-95 ring-0'
-                   }" />
-              <div>
-                <p class="font-semibold mb-2 transition-all duration-500 ${
-                  idx === 1 ? 'text-gray-800' : 'text-gray-500'
-                }">${testimonials[i].text}</p>
-                <span class="italic text-sm transition-all duration-500 ${
-                  idx === 1 ? 'text-gray-600' : 'text-gray-400'
-                }">${testimonials[i].author}</span>
-              </div>
-            </div>
-          `).join('')}
-        `;
-        
-        // Immediate positioning (no animation)
-        if (immediate) {
-          sliderInner.style.transition = 'none';
-          sliderInner.style.transform = 'translateX(-830px)';
-          setTimeout(() => {
-            sliderInner.style.transition = 'transform 0.8s cubic-bezier(0.22, 1, 0.36, 1)';
-          }, 10);
-        } else {
-          sliderInner.style.transform = 'translateX(-800px)';
-        }
+function nextTestimonial() {
+  let next = (current + 1) % testimonials.length;
+  animateTestimonial(next);
+  updateQueueAnimated(next);
+  current = next;
+}
 
-        // Update next cards with smooth transition
-        updateNextCards();
-      }
+function prevTestimonial() {
+  let next = (current - 1 + testimonials.length) % testimonials.length;
+  animateTestimonial(next);
+  updateQueueAnimated(next);
+  current = next;
+}
 
-      // Animate next cards with fade effect
-      function updateNextCards() {
-        const nextCards = document.getElementById('next-cards');
-        const next1 = getIdx(current + 1);
-        const next2 = getIdx(current + 2);
-        
-        // Fade out existing cards
-        if (nextCards.children.length > 0) {
-          Array.from(nextCards.children).forEach(child => {
-            child.classList.add('fade-out');
-          });
-          
-          // Wait for fade out before updating content
-          setTimeout(() => {
-            nextCards.innerHTML = `
-              <div class="bg-white rounded-xl w-[175px] h-[175px] flex items-center justify-center shadow-md grayscale next-slide fade-out">
-                <img src="${testimonials[next1].img}" alt="Next 1" class="w-full h-full object-cover rounded-lg" />
-              </div>
-              <div class="bg-white rounded-xl w-[175px] h-[175px] flex items-center justify-center shadow-md grayscale next-slide fade-out">
-                <img src="${testimonials[next2].img}" alt="Next 2" class="w-full h-full object-cover rounded-lg" />
-              </div>
-            `;
-            
-            // Fade in new cards
-            setTimeout(() => {
-              Array.from(nextCards.children).forEach(child => {
-                child.classList.remove('fade-out');
-                child.classList.add('fade-in');
-              });
-            }, 20);
-          }, 300);
-        } else {
-          // Initial load
-          nextCards.innerHTML = `
-            <div class="bg-white rounded-xl w-[175px] h-[175px] flex items-center justify-center shadow-md grayscale next-slide fade-in">
-              <img src="${testimonials[next1].img}" alt="Next 1" class="w-full h-full object-cover rounded-lg" />
-            </div>
-            <div class="bg-white rounded-xl w-[175px] h-[175px] flex items-center justify-center shadow-md grayscale next-slide fade-in">
-              <img src="${testimonials[next2].img}" alt="Next 2" class="w-full h-full object-cover rounded-lg" />
-            </div>
-          `;
-        }
-      }
+// Initial setup
+function setInitial() {
+  // Set main
+  document.getElementById('main-img').src = testimonials[current].img;
+  document.getElementById('main-text').innerText = testimonials[current].text;
+  document.getElementById('main-name').innerText = testimonials[current].name;
+  // Set queue with animation
+  updateQueueAnimated(current);
+}
+setInitial();
+setInterval(nextTestimonial, 4000);
+</script>
 
-      // Animate slider movement
-      function animate(dir) {
-        if (sliding) return;
-        sliding = true;
-        
-        const sliderInner = document.getElementById('slider-inner');
-        sliderInner.style.transform = `translateX(${dir === 1 ? -1600 : 0}px)`;
-        
-        setTimeout(() => {
-          current = getIdx(current + dir);
-          renderSlides(true);
-          sliding = false;
-        }, 800);
-      }
-
-      // Navigation functions
-      function nextSlide() { animate(1); }
-      function prevSlide() { animate(-1); }
-
-      // Auto-play controls
-      function startAuto() {
-        stopAuto();
-        auto = setInterval(() => {
-          if (document.hasFocus() && autoOn) nextSlide();
-        }, 4000);
-      }
-      function stopAuto() { clearInterval(auto); }
-      function pauseAuto() { autoOn = false; stopAuto(); }
-      function resumeAuto() { autoOn = true; startAuto(); }
-
-      // Initialize slider
-      document.addEventListener('DOMContentLoaded', () => {
-        renderSlides(true);
-        startAuto();
-      });
-    </script>
-
-@endsection
+@endpush
