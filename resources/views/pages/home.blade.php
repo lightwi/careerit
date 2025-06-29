@@ -1,4 +1,64 @@
-@extends('app') @section('content')
+@extends('app')
+
+
+@section('styles')
+
+<style>
+      /* Main slider container */
+      .slider-outer {
+        width: 800px;
+        overflow: hidden;
+        position: relative;
+        height: 200px;
+      }
+      
+      /* Inner sliding track */
+      .slider-inner {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        left: 0; 
+        top: 0;
+        width: 2400px; /* 3 slides */
+        transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        will-change: transform;
+        height: 100%;
+      }
+      
+      /* Individual slide card */
+      .slide-card {
+        width: 800px;
+        flex-shrink: 0;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        background: white;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        padding: 1.5rem;
+        margin-right: 2rem;
+        transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      
+      /* Next slides preview */
+      .next-slide {
+        transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      
+      /* Animation classes */
+      .fade-out {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      .fade-in {
+        opacity: 0.7;
+        transform: translateY(0);
+      }
+    </style>
+
+@endsection
+
+@section('content')
 
 <section class="container mx-auto px-4 md:px-0">
     <div
@@ -310,7 +370,7 @@
                 >
                     <div class="flex-grow relative overflow-hidden">
                         <img
-                            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+                            src="{{ asset('assets/meetRohit.png') }}"
                             alt="Rohit Rajput"
                             class="w-full h-full object-cover object-center"
                         />
@@ -746,16 +806,22 @@
     <!-- Background overlay with lower opacity and proper z-index -->
     <div class="absolute inset-0 z-0 bg-gray-100/10"></div>
 
-    <div class="container mx-auto px-4 md:px-0 py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 2xl:py-24 relative z-10">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+    <div class="container mx-auto px-4 md:px-0 py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 2xl:py-24 z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center relative">
             <!-- Left Column -->
-            <div class="rounded-xl h-[490px] w-full lg:col-span-1 overflow-visible">
+            <!-- <div class="rounded-xl h-[490px] w-full lg:col-span-1 overflow-visible">
                 <div class="h-full w-full bg-c-main relative">
                     <img
-                        src="{{ asset('assets/face.webp') }}"
+                        src="{{ asset('assets/rohit.png') }}"
                         alt="Decorative element"
-                        class="absolute top-1/2 -translate-y-1/2 ml-10 -mr-32 w-[700px] h-[580px] object-contain"
+                        class="absolute top-0 w-[400px] h-[500px] object-contain"
                     />
+                </div>
+            </div> -->
+
+            <div class="bg-c-main ml-8 h-[550px] w-[calc(100%-15px)] lg:col-span-1 overflow-hidden">
+                <div class="absolute left-[-20px] h-[550px] w-[560px] py-10">
+                    <img src="{{ asset('assets/rohit.png') }}" alt="Decorative element" class="h-full w-full object-contain">
                 </div>
             </div>
 
@@ -966,6 +1032,36 @@
     </div>
 </section>
 
+
+<section class="flex flex-col items-center justify-center min-h-screen">
+    <div class="container mx-auto flex flex-row items-center gap-8 overflow-hidden relative"
+        style="max-width: 1200px;" id="testimonial-slider">
+    
+    <!-- Main Slider -->
+    <div class="slider-outer" id="slider-outer"
+            onmouseenter="pauseAuto()" onmouseleave="resumeAuto()">
+        <div class="slider-inner" id="slider-inner"></div>
+    </div>
+    
+    <!-- Next Slides Preview -->
+    <div class="flex flex-col items-center">
+        <div class="flex gap-4" id="next-cards"></div>
+    </div>
+    </div>
+    
+    <!-- Navigation Arrows -->
+    <div class="container mx-auto flex gap-4 mt-6 justify-end w-full" style="max-width:1200px;">
+    <button onclick="prevSlide()"
+            class="px-4 py-2 rounded-full border border-orange-400 text-orange-400 hover:bg-orange-50 transition-all duration-300">
+        &larr;
+    </button>
+    <button onclick="nextSlide()"
+            class="px-4 py-2 rounded-full border border-orange-400 text-orange-400 hover:bg-orange-50 transition-all duration-300">
+        &rarr;
+    </button>
+    </div>
+</section>
+
 @endsection @section('scripts')
 
 <script>
@@ -986,5 +1082,160 @@
             });
         });
 </script>
+
+<script>
+      // Testimonial data
+      const testimonials = [
+        {
+          img: "{{ asset('assets/run.jpeg') }}",
+          text: "“I used to think SEO was just about keywords — now I've helped my cousin's business rank on Google. This roadmap made it click for me.”",
+          author: "Nishant, First-Year Uni Student"
+        },
+        {
+          img: "{{ asset('assets/run.jpeg') }}",
+          text: "“Slider testimonial 2 here. Add more user quotes as you like.”",
+          author: "Other Student"
+        },
+        {
+          img: "{{ asset('assets/run.jpeg') }}",
+          text: "“Slider testimonial 3 here. More content as needed.”",
+          author: "Another User"
+        }
+      ];
+
+      // Slider state
+      let current = 0;
+      let sliding = false;
+      let auto = null;
+      let autoOn = true;
+
+      // Helper function to get circular index
+      function getIdx(idx) {
+        return (idx + testimonials.length) % testimonials.length;
+      }
+
+      // Render slides with smooth transitions
+      function renderSlides(immediate = false) {
+        const prev = getIdx(current - 1);
+        const curr = current;
+        const next = getIdx(current + 1);
+
+        const sliderInner = document.getElementById('slider-inner');
+        
+        // Create slides with different states
+        sliderInner.innerHTML = `
+          ${[prev, curr, next].map((i, idx) => `
+            <div class="slide-card">
+              <img src="${testimonials[i].img}" alt="User ${idx+1}"
+                   class="w-32 h-32 rounded-lg object-cover mr-6 transition-all duration-500 ${
+                     idx === 1 ? 'grayscale-0 scale-105 ring-4 ring-purple-200' : 'grayscale scale-95 ring-0'
+                   }" />
+              <div>
+                <p class="font-semibold mb-2 transition-all duration-500 ${
+                  idx === 1 ? 'text-gray-800' : 'text-gray-500'
+                }">${testimonials[i].text}</p>
+                <span class="italic text-sm transition-all duration-500 ${
+                  idx === 1 ? 'text-gray-600' : 'text-gray-400'
+                }">${testimonials[i].author}</span>
+              </div>
+            </div>
+          `).join('')}
+        `;
+        
+        // Immediate positioning (no animation)
+        if (immediate) {
+          sliderInner.style.transition = 'none';
+          sliderInner.style.transform = 'translateX(-830px)';
+          setTimeout(() => {
+            sliderInner.style.transition = 'transform 0.8s cubic-bezier(0.22, 1, 0.36, 1)';
+          }, 10);
+        } else {
+          sliderInner.style.transform = 'translateX(-800px)';
+        }
+
+        // Update next cards with smooth transition
+        updateNextCards();
+      }
+
+      // Animate next cards with fade effect
+      function updateNextCards() {
+        const nextCards = document.getElementById('next-cards');
+        const next1 = getIdx(current + 1);
+        const next2 = getIdx(current + 2);
+        
+        // Fade out existing cards
+        if (nextCards.children.length > 0) {
+          Array.from(nextCards.children).forEach(child => {
+            child.classList.add('fade-out');
+          });
+          
+          // Wait for fade out before updating content
+          setTimeout(() => {
+            nextCards.innerHTML = `
+              <div class="bg-white rounded-xl w-[175px] h-[175px] flex items-center justify-center shadow-md grayscale next-slide fade-out">
+                <img src="${testimonials[next1].img}" alt="Next 1" class="w-full h-full object-cover rounded-lg" />
+              </div>
+              <div class="bg-white rounded-xl w-[175px] h-[175px] flex items-center justify-center shadow-md grayscale next-slide fade-out">
+                <img src="${testimonials[next2].img}" alt="Next 2" class="w-full h-full object-cover rounded-lg" />
+              </div>
+            `;
+            
+            // Fade in new cards
+            setTimeout(() => {
+              Array.from(nextCards.children).forEach(child => {
+                child.classList.remove('fade-out');
+                child.classList.add('fade-in');
+              });
+            }, 20);
+          }, 300);
+        } else {
+          // Initial load
+          nextCards.innerHTML = `
+            <div class="bg-white rounded-xl w-[175px] h-[175px] flex items-center justify-center shadow-md grayscale next-slide fade-in">
+              <img src="${testimonials[next1].img}" alt="Next 1" class="w-full h-full object-cover rounded-lg" />
+            </div>
+            <div class="bg-white rounded-xl w-[175px] h-[175px] flex items-center justify-center shadow-md grayscale next-slide fade-in">
+              <img src="${testimonials[next2].img}" alt="Next 2" class="w-full h-full object-cover rounded-lg" />
+            </div>
+          `;
+        }
+      }
+
+      // Animate slider movement
+      function animate(dir) {
+        if (sliding) return;
+        sliding = true;
+        
+        const sliderInner = document.getElementById('slider-inner');
+        sliderInner.style.transform = `translateX(${dir === 1 ? -1600 : 0}px)`;
+        
+        setTimeout(() => {
+          current = getIdx(current + dir);
+          renderSlides(true);
+          sliding = false;
+        }, 800);
+      }
+
+      // Navigation functions
+      function nextSlide() { animate(1); }
+      function prevSlide() { animate(-1); }
+
+      // Auto-play controls
+      function startAuto() {
+        stopAuto();
+        auto = setInterval(() => {
+          if (document.hasFocus() && autoOn) nextSlide();
+        }, 4000);
+      }
+      function stopAuto() { clearInterval(auto); }
+      function pauseAuto() { autoOn = false; stopAuto(); }
+      function resumeAuto() { autoOn = true; startAuto(); }
+
+      // Initialize slider
+      document.addEventListener('DOMContentLoaded', () => {
+        renderSlides(true);
+        startAuto();
+      });
+    </script>
 
 @endsection
