@@ -21,6 +21,79 @@
 .animate-fadeInRight { animation: fadeInRight 0.6s both; }
 </style>
 
+<style>
+.autoflow {
+    animation: text-appear both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 100vh;
+}
+@keyframes text-appear {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Base styles for the containers */
+.topflow {
+  position: sticky;
+  top: 0;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+  z-index: 1; /* Default z-index */
+}
+
+/* Remove the duplicate .topflow declaration */
+/* Adjust z-index and animation delay for subsequent containers */
+.topflow:nth-child(2) {
+  z-index: 2;
+  animation-delay: 0.1s;
+  top: 8px;
+}
+
+.topflow:nth-child(3) {
+  z-index: 3;
+  animation-delay: 0.2s;
+  top: 16px;
+}
+
+/* Keyframe animation for the fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Adjust spacing to ensure proper overlap */
+.topflow + .topflow {
+  margin-top: -50px; /* Negative margin to create overlap */
+}
+
+/* Scrollable content */
+body {
+  height: 300vh;
+}
+
+/* Container wrapper adjustments */
+.container-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* Remove gap to allow proper overlap */
+}
+</style>
+
 @endpush
 
 @section('content')
@@ -81,17 +154,17 @@
                     <img
                         src="https://randomuser.me/api/portraits/women/44.jpg"
                         alt="User"
-                        class="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white object-cover"
+                        class="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white object-cover" loading="lazy"
                     />
                     <img
                         src="https://randomuser.me/api/portraits/men/32.jpg"
                         alt="User"
-                        class="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white object-cover"
+                        class="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white object-cover" loading="lazy"
                     />
                     <img
                         src="https://randomuser.me/api/portraits/women/68.jpg"
                         alt="User"
-                        class="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white object-cover"
+                        class="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-white object-cover" loading="lazy"
                     />
                     <div
                         class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gray-600 border-2 border-white flex justify-center items-center"
@@ -166,12 +239,14 @@
                 alt="Description"
                 class="w-full h-auto object-cover"
                 style="min-height: 300px"
+                loading="lazy"
             />
         </div>
     </div>
 </section>
 
-<section class="bg-white">
+
+<section class="bg-white autoflow">
     <div class="container mx-auto px-4 md:px-0">
         <div
             class="flex flex-col gap-4 sm:gap-6 lg:flex-row lg:justify-between lg:items-center lg:gap-12 py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 2xl:py-24"
@@ -191,7 +266,7 @@
         </div>
 
         <div
-            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pb-8 sm:pb-10 md:pb-12 lg:pb-16 xl:pb-20 2xl:pb-24"
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pb-8 sm:pb-10 md:pb-12 lg:pb-16 xl:pb-20 2xl:pb-24 autoflow"
         >
             <!-- Service 1 -->
             <div
@@ -337,7 +412,7 @@
                         <img
                             src="{{ asset('assets/meetRohit.png') }}"
                             alt="Rohit Rajput"
-                            class="w-full h-full object-cover object-center"
+                            class="w-full h-full object-cover object-center" loading="lazy"
                         />
                         <div class="absolute inset-0 bg-c-main/50"></div>
                     </div>
@@ -354,8 +429,10 @@
     </div>
 </section>
 
+
+
 <section
-    class="container mx-auto py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 2xl:py-24"
+    class="container mx-auto py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 2xl:py-24 autoflow"
 >
     <div
         class="flex flex-col gap-4 sm:gap-6 lg:flex-row lg:justify-between lg:items-center lg:gap-12"
@@ -374,7 +451,9 @@
         </p>
     </div>
 
-    <div class="bg-white border border-gray-300 p-8 mt-12 rounded-lg">
+    <div class="container-wrapper autoflow">
+
+    <div class="bg-white border border-gray-300 p-8 mt-12 rounded-lg topflow">
         <div
             class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4"
         >
@@ -519,9 +598,303 @@
             </div>
         </div>
     </div>
+
+    <div class="bg-white border border-gray-300 p-8 mt-12 rounded-lg topflow">
+        <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4"
+        >
+            <div class="p-8">
+                <div class="flex items-center gap-2 text-c-main">
+                    <i class="fa-solid fa-circle fa-xs"></i>
+                    <p
+                        class="font-inter font-medium text-[16px] leading-[24px] tracking-[0.06em]"
+                    >
+                        Digital Marketing
+                    </p>
+                </div>
+
+                <div class="my-8">
+                    <h4
+                        class="font-poppins font-normal text-t-first text-[24px] leading-[100%] tracking-[-0.01em]"
+                    >
+                        A $598 Billion Industry on the Rise
+                    </h4>
+                    <p
+                        class="font-roboto font-light text-t-second text-[18px] leading-[28px] tracking-[0.02em] my-2"
+                    >
+                        The global digital marketing industry was valued at
+                        approximately $598.58 billion in 2024 and is projected
+                        to grow at a CAGR of 9.20%, aiming to hit $1.44 trillion
+                        by 2034.
+                    </p>
+                </div>
+
+                <a href="" class="text-blue-600"
+                    >Read more <i class="fa-solid fa-arrow-right"></i
+                ></a>
+            </div>
+
+            <div class="p-4">
+                <table class="min-w-full border border-gray-200 table-fixed">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th
+                                class="w-1/3 px-8 py-4 text-left text-lg font-medium text-gray-700 border-b"
+                            >
+                                Career
+                            </th>
+                            <th
+                                class="w-1/3 px-8 py-4 text-left text-lg font-medium text-gray-700 border-b"
+                            >
+                                Salary Range
+                            </th>
+                            <th
+                                class="w-1/3 px-8 py-4 text-left text-lg font-medium text-gray-700 border-b"
+                            >
+                                Scope
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td
+                                class="w-1/3 px-6 py-4 text-sm text-gray-700 border-b"
+                            >
+                                SEO Specialist
+                            </td>
+                            <td
+                                class="w-1/3 px-6 py-4 text-sm text-gray-700 border-b"
+                            >
+                                $60,000 - $80,000
+                            </td>
+                            <td
+                                class="w-1/3 px-6 py-4 text-sm text-gray-700 border-b"
+                            >
+                                Job offering Globally Over 150,000
+                            </td>
+                        </tr>
+                        <tr>
+                            <td
+                                class="w-1/3 px-4 py-2 text-sm text-gray-700 border-b"
+                            >
+                                Raid ads Manage
+                            </td>
+                            <td
+                                class="w-1/3 px-4 py-2 text-sm text-gray-700 border-b"
+                            >
+                                $60,000 - $127,000
+                            </td>
+                            <td
+                                class="w-1/3 px-4 py-2 text-sm text-gray-700 border-b"
+                            >
+                                Job offering Globally Over 36,000 per year
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-1/3 px-4 py-2 text-sm text-gray-700">
+                                Content Marketer
+                            </td>
+                            <td class="w-1/3 px-4 py-2 text-sm text-gray-700">
+                                $77,858 - $111,891
+                            </td>
+                            <td class="w-1/3 px-4 py-2 text-sm text-gray-700">
+                                Job offering Over 17000+ alone in USA
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div
+            class="flex items-center justify-start flex-wrap gap-16 p-6 my-8 bg-b-main rounded-lg"
+        >
+            <!-- Each company item -->
+            <div class="flex flex-col items-center">
+                <span class="text-2xl font-bold text-gray-500 mb-1"
+                    >Top Companies</span
+                >
+            </div>
+
+            <div class="h-[60px] bg-gray-300">.</div>
+
+            <div class="flex items-center gap-4">
+                <i class="fa-brands fa-facebook text-blue-500 fa-lg"></i>
+                <strong class="font-medium">Facebook</strong>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <i class="fa-brands fa-google text-fuchsia-500 fa-lg"></i>
+                <strong class="font-medium">Google</strong>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <i class="fa-brands fa-instagram text-red-500 fa-lg"></i>
+                <strong class="font-medium">Instagran</strong>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <i class="fa-brands fa-microsoft text-blue-500 fa-lg"></i>
+                <strong class="font-medium">Microsift</strong>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <i class="fa-brands fa-google-play text-green-500 fa-lg"></i>
+                <strong class="font-medium">Pay Store</strong>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white border border-gray-300 p-8 mt-12 rounded-lg topflow">
+        <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4"
+        >
+            <div class="p-8">
+                <div class="flex items-center gap-2 text-c-main">
+                    <i class="fa-solid fa-circle fa-xs"></i>
+                    <p
+                        class="font-inter font-medium text-[16px] leading-[24px] tracking-[0.06em]"
+                    >
+                        Digital Marketing
+                    </p>
+                </div>
+
+                <div class="my-8">
+                    <h4
+                        class="font-poppins font-normal text-t-first text-[24px] leading-[100%] tracking-[-0.01em]"
+                    >
+                        A $598 Billion Industry on the Rise
+                    </h4>
+                    <p
+                        class="font-roboto font-light text-t-second text-[18px] leading-[28px] tracking-[0.02em] my-2"
+                    >
+                        The global digital marketing industry was valued at
+                        approximately $598.58 billion in 2024 and is projected
+                        to grow at a CAGR of 9.20%, aiming to hit $1.44 trillion
+                        by 2034.
+                    </p>
+                </div>
+
+                <a href="" class="text-blue-600"
+                    >Read more <i class="fa-solid fa-arrow-right"></i
+                ></a>
+            </div>
+
+            <div class="p-4">
+                <table class="min-w-full border border-gray-200 table-fixed">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th
+                                class="w-1/3 px-8 py-4 text-left text-lg font-medium text-gray-700 border-b"
+                            >
+                                Career
+                            </th>
+                            <th
+                                class="w-1/3 px-8 py-4 text-left text-lg font-medium text-gray-700 border-b"
+                            >
+                                Salary Range
+                            </th>
+                            <th
+                                class="w-1/3 px-8 py-4 text-left text-lg font-medium text-gray-700 border-b"
+                            >
+                                Scope
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td
+                                class="w-1/3 px-6 py-4 text-sm text-gray-700 border-b"
+                            >
+                                SEO Specialist
+                            </td>
+                            <td
+                                class="w-1/3 px-6 py-4 text-sm text-gray-700 border-b"
+                            >
+                                $60,000 - $80,000
+                            </td>
+                            <td
+                                class="w-1/3 px-6 py-4 text-sm text-gray-700 border-b"
+                            >
+                                Job offering Globally Over 150,000
+                            </td>
+                        </tr>
+                        <tr>
+                            <td
+                                class="w-1/3 px-4 py-2 text-sm text-gray-700 border-b"
+                            >
+                                Raid ads Manage
+                            </td>
+                            <td
+                                class="w-1/3 px-4 py-2 text-sm text-gray-700 border-b"
+                            >
+                                $60,000 - $127,000
+                            </td>
+                            <td
+                                class="w-1/3 px-4 py-2 text-sm text-gray-700 border-b"
+                            >
+                                Job offering Globally Over 36,000 per year
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="w-1/3 px-4 py-2 text-sm text-gray-700">
+                                Content Marketer
+                            </td>
+                            <td class="w-1/3 px-4 py-2 text-sm text-gray-700">
+                                $77,858 - $111,891
+                            </td>
+                            <td class="w-1/3 px-4 py-2 text-sm text-gray-700">
+                                Job offering Over 17000+ alone in USA
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div
+            class="flex items-center justify-start flex-wrap gap-16 p-6 my-8 bg-b-main rounded-lg"
+        >
+            <!-- Each company item -->
+            <div class="flex flex-col items-center">
+                <span class="text-2xl font-bold text-gray-500 mb-1"
+                    >Top Companies</span
+                >
+            </div>
+
+            <div class="h-[60px] bg-gray-300">.</div>
+
+            <div class="flex items-center gap-4">
+                <i class="fa-brands fa-facebook text-blue-500 fa-lg"></i>
+                <strong class="font-medium">Facebook</strong>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <i class="fa-brands fa-google text-fuchsia-500 fa-lg"></i>
+                <strong class="font-medium">Google</strong>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <i class="fa-brands fa-instagram text-red-500 fa-lg"></i>
+                <strong class="font-medium">Instagran</strong>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <i class="fa-brands fa-microsoft text-blue-500 fa-lg"></i>
+                <strong class="font-medium">Microsift</strong>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <i class="fa-brands fa-google-play text-green-500 fa-lg"></i>
+                <strong class="font-medium">Pay Store</strong>
+            </div>
+        </div>
+    </div>
+
+    </div>
 </section>
 
-<section class="bg-c-main">
+<section class="bg-c-main autoflow">
     <div
         class="container mx-auto py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 2xl:py-24"
     >
@@ -598,13 +971,14 @@
     </div>
 </section>
 
-<section class="bg-b-main">
+
+
+<section class="bg-b-main autoflow">
     <div
         class="container mx-auto px-4 md:px-0 py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 2xl:py-24"
     >
         <div
-            class="flex flex-col gap-4 sm:gap-6 lg:flex-row lg:justify-between lg:gap-12 pb-8 md:pb-10 lg:pb-16 xl:pb-20 2xl:pb-24"
-        >
+            class="flex flex-col gap-4 sm:gap-6 lg:flex-row lg:justify-between lg:gap-12 pb-8 md:pb-10 lg:pb-16 xl:pb-20 2xl:pb-24">
             <h2
                 class="font-poppins font-medium text-[36px] text-t-first leading-[48px] tracking-[-0.02em] lg:w-[40%]"
             >
@@ -622,7 +996,7 @@
             </p>
         </div>
 
-<div class="flex flex-col lg:flex-row gap-4 md:gap-6 p-4 md:p-0">
+<div class="flex flex-col lg:flex-row gap-4 md:gap-6 p-4 md:p-0 autoflow">
     <!-- Left Column -->
     <div class="bg-[#a6aef2] rounded-xl overflow-hidden flex flex-col w-full lg:w-[488px] lg:h-[635px]">
         <!-- Image container -->
@@ -746,7 +1120,7 @@
 </section>
 
 <section
-    class="relative bg-cover bg-center"
+    class="relative bg-cover bg-center autoflow"
     style="background-image: url('{{ asset('assets/face.png') }}')"
 >
     <!-- Background overlay with lower opacity and proper z-index -->
@@ -805,7 +1179,7 @@
     </div>
 </section>
 
-<section>
+<section class="autoflow">
     <div
         class="container mx-auto px-4 md:px-0 py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 2xl:py-24"
     >
@@ -827,187 +1201,198 @@
                 </p>
             </div>
 
-<div class="text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 font-light max-w-prose lg:w-[50%]">
-    <!-- Accordion Item 1 -->
-    <div class="overflow-hidden transition-all duration-300 mb-1 rounded-lg">
-        <input
-            type="checkbox"
-            id="accordion-1"
-            class="hidden peer"
-            checked
-        />
-        <label
-            for="accordion-1"
-            class="flex justify-between items-center p-5 cursor-pointer bg-gray-50 hover:bg-white transition-all duration-200 peer-checked:bg-white peer-checked:text-c-main"
-        >
-            <h2 class="font-poppins font-medium text-[18px] leading-[28px] tracking-[0]">
-                Do I need experience or a tech background to start?
-            </h2>
-            <svg
-                class="w-6 h-6 text-gray-600 transition-all duration-300 transform peer-checked:rotate-180 peer-checked:text-white"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-            >
-                <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M19 9l-7 7-7-7"
-                />
-            </svg>
-        </label>
-        <div
-            class="overflow-hidden transition-all duration-300 max-h-0 peer-checked:max-h-[500px] bg-white"
-        >
-            <div class="p-5 pt-0 text-gray-600">
-                <p class="font-poppins font-light text-[16px] leading-[26px] tracking-[0.02em]">
-                    Not at all. In fact, CareerIntoIT was built for
-                    people with no prior experience. Whether you're
-                    in retail, hospitality, or just out of uni,
-                    we'll help you understand exactly where to begin
-                    and what skills matter most.
-                </p>
-            </div>
-        </div>
-    </div>
+            <div class="text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 font-light max-w-prose lg:w-[50%]">
+                <!-- Accordion Item 1 -->
+                <div class="overflow-hidden transition-all duration-300 mb-1 rounded-lg">
+                    <input
+                        type="checkbox"
+                        id="accordion-1"
+                        class="hidden peer"
+                        checked
+                    />
+                    <label
+                        for="accordion-1"
+                        class="flex justify-between items-center p-5 cursor-pointer bg-gray-50 hover:bg-white transition-all duration-200 peer-checked:bg-white peer-checked:text-c-main"
+                    >
+                        <h2 class="font-poppins font-medium text-[18px] leading-[28px] tracking-[0]">
+                            Do I need experience or a tech background to start?
+                        </h2>
+                        <svg
+                            class="w-6 h-6 text-gray-600 transition-all duration-300 transform peer-checked:rotate-180 peer-checked:text-white"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M19 9l-7 7-7-7"
+                            />
+                        </svg>
+                    </label>
+                    <div
+                        class="overflow-hidden transition-all duration-300 max-h-0 peer-checked:max-h-[500px] bg-white"
+                    >
+                        <div class="p-5 pt-0 text-gray-600">
+                            <p class="font-poppins font-light text-[16px] leading-[26px] tracking-[0.02em]">
+                                Not at all. In fact, CareerIntoIT was built for
+                                people with no prior experience. Whether you're
+                                in retail, hospitality, or just out of uni,
+                                we'll help you understand exactly where to begin
+                                and what skills matter most.
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- Accordion Item 2 -->
-    <div class="overflow-hidden transition-all duration-300 mb-1 rounded-lg">
-        <input
-            type="checkbox"
-            id="accordion-2"
-            class="hidden peer"
-        />
-        <label
-            for="accordion-2"
-            class="flex justify-between items-center p-5 cursor-pointer bg-gray-50 hover:bg-white transition-all duration-200 peer-checked:bg-white peer-checked:text-c-main"
-        >
-            <h2 class="font-poppins font-medium text-[18px] leading-[28px] tracking-[0]">
-                How is this roadmap different from other free guides?
-            </h2>
-            <svg
-                class="w-6 h-6 text-gray-600 transition-all duration-300 transform peer-checked:rotate-180 peer-checked:text-white"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-            >
-                <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M19 9l-7 7-7-7"
-                />
-            </svg>
-        </label>
-        <div
-            class="overflow-hidden transition-all duration-300 max-h-0 peer-checked:max-h-[500px] bg-white"
-        >
-            <div class="p-5 pt-0 text-gray-600">
-                <p class="font-poppins font-light text-[16px] leading-[26px] tracking-[0.02em]">
-                    Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex
-                    ea commodo consequat.
-                </p>
-            </div>
-        </div>
-    </div>
+                <!-- Accordion Item 2 -->
+                <div class="overflow-hidden transition-all duration-300 mb-1 rounded-lg">
+                    <input
+                        type="checkbox"
+                        id="accordion-2"
+                        class="hidden peer"
+                    />
+                    <label
+                        for="accordion-2"
+                        class="flex justify-between items-center p-5 cursor-pointer bg-gray-50 hover:bg-white transition-all duration-200 peer-checked:bg-white peer-checked:text-c-main"
+                    >
+                        <h2 class="font-poppins font-medium text-[18px] leading-[28px] tracking-[0]">
+                            How is this roadmap different from other free guides?
+                        </h2>
+                        <svg
+                            class="w-6 h-6 text-gray-600 transition-all duration-300 transform peer-checked:rotate-180 peer-checked:text-white"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M19 9l-7 7-7-7"
+                            />
+                        </svg>
+                    </label>
+                    <div
+                        class="overflow-hidden transition-all duration-300 max-h-0 peer-checked:max-h-[500px] bg-white"
+                    >
+                        <div class="p-5 pt-0 text-gray-600">
+                            <p class="font-poppins font-light text-[16px] leading-[26px] tracking-[0.02em]">
+                                Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex
+                                ea commodo consequat.
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- Accordion Item 3 -->
-    <div class="overflow-hidden transition-all duration-300 mb-1 rounded-lg">
-        <input
-            type="checkbox"
-            id="accordion-3"
-            class="hidden peer"
-        />
-        <label
-            for="accordion-3"
-            class="flex justify-between items-center p-5 cursor-pointer bg-gray-50 hover:bg-white transition-all duration-200 peer-checked:bg-white peer-checked:text-c-main"
-        >
-            <h2 class="font-poppins font-medium text-[18px] leading-[28px] tracking-[0]">
-                What if I'm already working or studying full-time?
-            </h2>
-            <svg
-                class="w-6 h-6 text-gray-600 transition-all duration-300 transform peer-checked:rotate-180 peer-checked:text-white"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-            >
-                <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M19 9l-7 7-7-7"
-                />
-            </svg>
-        </label>
-        <div
-            class="overflow-hidden transition-all duration-300 max-h-0 peer-checked:max-h-[500px] bg-white"
-        >
-            <div class="p-5 pt-0 text-gray-600">
-                <p class="font-poppins font-light text-[16px] leading-[26px] tracking-[0.02em]">
-                    Duis aute irure dolor in reprehenderit in
-                    voluptate velit esse cillum dolore eu fugiat
-                    nulla pariatur.
-                </p>
-            </div>
-        </div>
-    </div>
+                <!-- Accordion Item 3 -->
+                <div class="overflow-hidden transition-all duration-300 mb-1 rounded-lg">
+                    <input
+                        type="checkbox"
+                        id="accordion-3"
+                        class="hidden peer"
+                    />
+                    <label
+                        for="accordion-3"
+                        class="flex justify-between items-center p-5 cursor-pointer bg-gray-50 hover:bg-white transition-all duration-200 peer-checked:bg-white peer-checked:text-c-main"
+                    >
+                        <h2 class="font-poppins font-medium text-[18px] leading-[28px] tracking-[0]">
+                            What if I'm already working or studying full-time?
+                        </h2>
+                        <svg
+                            class="w-6 h-6 text-gray-600 transition-all duration-300 transform peer-checked:rotate-180 peer-checked:text-white"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M19 9l-7 7-7-7"
+                            />
+                        </svg>
+                    </label>
+                    <div
+                        class="overflow-hidden transition-all duration-300 max-h-0 peer-checked:max-h-[500px] bg-white"
+                    >
+                        <div class="p-5 pt-0 text-gray-600">
+                            <p class="font-poppins font-light text-[16px] leading-[26px] tracking-[0.02em]">
+                                Duis aute irure dolor in reprehenderit in
+                                voluptate velit esse cillum dolore eu fugiat
+                                nulla pariatur.
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- Accordion Item 4 -->
-    <div class="overflow-hidden transition-all duration-300 mb-1 rounded-lg">
-        <input
-            type="checkbox"
-            id="accordion-4"
-            class="hidden peer"
-        />
-        <label
-            for="accordion-4"
-            class="flex justify-between items-center p-5 cursor-pointer bg-gray-50 hover:bg-white transition-all duration-200 peer-checked:bg-white peer-checked:text-c-main"
-        >
-            <h2 class="font-poppins font-medium text-[18px] leading-[28px] tracking-[0]">
-                I'm not sure which digital career is right for me. Can you help?
-            </h2>
-            <svg
-                class="w-6 h-6 text-gray-600 transition-all duration-300 transform peer-checked:rotate-180 peer-checked:text-white"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-            >
-                <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M19 9l-7 7-7-7"
-                />
-            </svg>
-        </label>
-        <div
-            class="overflow-hidden transition-all duration-300 max-h-0 peer-checked:max-h-[500px] bg-white"
-        >
-            <div class="p-5 pt-0 text-gray-600">
-                <p class="font-poppins font-light text-[16px] leading-[26px] tracking-[0.02em]">
-                    Duis aute irure dolor in reprehenderit in
-                    voluptate velit esse cillum dolore eu fugiat
-                    nulla pariatur.
-                </p>
+                <!-- Accordion Item 4 -->
+                <div class="overflow-hidden transition-all duration-300 mb-1 rounded-lg">
+                    <input
+                        type="checkbox"
+                        id="accordion-4"
+                        class="hidden peer"
+                    />
+                    <label
+                        for="accordion-4"
+                        class="flex justify-between items-center p-5 cursor-pointer bg-gray-50 hover:bg-white transition-all duration-200 peer-checked:bg-white peer-checked:text-c-main"
+                    >
+                        <h2 class="font-poppins font-medium text-[18px] leading-[28px] tracking-[0]">
+                            I'm not sure which digital career is right for me. Can you help?
+                        </h2>
+                        <svg
+                            class="w-6 h-6 text-gray-600 transition-all duration-300 transform peer-checked:rotate-180 peer-checked:text-white"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M19 9l-7 7-7-7"
+                            />
+                        </svg>
+                    </label>
+                    <div
+                        class="overflow-hidden transition-all duration-300 max-h-0 peer-checked:max-h-[500px] bg-white"
+                    >
+                        <div class="p-5 pt-0 text-gray-600">
+                            <p class="font-poppins font-light text-[16px] leading-[26px] tracking-[0.02em]">
+                                Duis aute irure dolor in reprehenderit in
+                                voluptate velit esse cillum dolore eu fugiat
+                                nulla pariatur.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</div>
 
         </div>
     </div>
 </section>
 
 
-<section class="bg-[#fff4f0] py-24">
+<section class="bg-[#fff4f0] py-24 autoflow">
     <div class="container mx-auto flex flex-col">
     <!-- Main slider grid -->
+
+    <div
+            class="flex flex-col gap-4 sm:gap-6 lg:flex-row lg:justify-between lg:gap-12 pb-8 md:pb-10 lg:pb-16 xl:pb-20 2xl:pb-24">
+            <h2 class="font-poppins font-medium text-[36px] leading-[48px] tracking-[-0.02em]">
+                What Our Learners Say
+            </h2>
+            <p class="font-roboto font-light text-[20px] leading-[30px] tracking-[0.02em] text-gray-600 max-w-prose lg:w-[50%]">
+                When you’re starting something new, it helps to hear from people who’ve been where you are. These are real stories from learners and career-changers who took the first step — just like you're about to.
+            </p>
+        </div>
+
     <div class="flex w-full p-4 gap-6 rounded-lg">
         <!-- Left Main Testimonial -->
         <div id="main" class="flex items-center gap-4 w-[70%] transition-all duration-700">
-        <img id="main-img" src="https://randomuser.me/api/portraits/men/32.jpg" class="h-28 w-28 rounded-md object-cover bg-purple-300 shadow-lg transition-all duration-700" />
+        <img id="main-img" src="https://randomuser.me/api/portraits/men/32.jpg" class="h-40 w-40 rounded-md object-cover bg-purple-300 shadow-lg transition-all duration-700" />
         <div>
             <p id="main-text" class="text-gray-700 font-medium text-lg"></p>
             <span id="main-name" class="block text-gray-500 italic text-sm mt-3"></span>
@@ -1026,6 +1411,76 @@
         </div>
     </div>
     </div>
+</section>
+
+
+
+<section class="py-12 bg-white">
+
+<div class="w-full flex flex-col items-center py-12 bg-white">
+  <div class="relative w-[90%] mx-auto">
+    <!-- Timeline base line -->
+    <div class="absolute left-0 top-7 w-full h-1 bg-gray-200 z-0"></div>
+    <!-- Progress line -->
+    <div class="absolute left-0 top-7 h-1 bg-orange-500 z-10" style="width:40%"></div>
+
+    <!-- Timeline Dots and Floating Box -->
+    <div class="flex justify-between items-center w-full relative z-20">
+      <!-- Dot 1 -->
+      <div class="flex flex-col items-center w-1/5 mt-[21px]">
+        <div class="w-4 h-4 rounded-full bg-orange-500 border-2 border-white"></div>
+      </div>
+      <!-- Dot 2 + Floating Box -->
+      <div class="flex flex-col items-center w-1/5 relative mt-[21px]">
+        <div class="w-4 h-4 rounded-full bg-orange-500 border-2 border-white"></div>
+        <!-- Floating box above the line -->
+        <div class="absolute -top-14 left-1/2 right-1/2 -translate-x-1/2">
+          <div class="bg-orange-500 text-white text-[11px] px-3 py-1.5 rounded shadow w-56 text-center">
+            Exactly what skills to learn <br />(with free & paid options)
+          </div>
+        </div>
+      </div>
+      <!-- Dot 3 -->
+      <div class="flex flex-col items-center w-1/5 mt-[21px]">
+        <div class="w-4 h-4 rounded-full bg-gray-200 border-2 border-white"></div>
+      </div>
+      <!-- Dot 4 -->
+      <div class="flex flex-col items-center w-1/5 relative mt-[21px]">
+        <div class="w-4 h-4 rounded-full bg-gray-200 border-2 border-white"></div>
+        <!-- Floating box above the line -->
+        <div class="absolute -top-14 left-1/2 right-1/4 -translate-x-1/2">
+          <div class="bg-white text-[11px] text-gray-700 px-3 py-1.5 rounded w-56 text-center">
+            Exactly what skills to learn <br />(with free & paid options)
+          </div>
+        </div>
+      </div>
+      <!-- Dot 5 -->
+      <div class="flex flex-col items-center w-1/5 mt-[21px]">
+        <div class="w-4 h-4 rounded-full bg-gray-200 border-2 border-white"></div>
+      </div>
+    </div>
+
+    <!-- Descriptions under each dot -->
+    <div class="flex justify-between items-center w-full mt-8">
+      <div class="w-1/4 ml-12 text-xs text-gray-700 text-center">
+        The 5 fastest-growing<br/>digital careers in 2025
+      </div>
+      <div class="w-1/4 text-xs text-gray-700 text-center">
+        
+      </div>
+      <div class="w-1/4 ml-12 text-xs text-gray-700 text-center">
+        What to do week by week<br/>for your chosen path
+      </div>
+      <div class="w-1/4 text-xs text-gray-700 text-center">
+        
+      </div>
+      <div class="w-1/4 ml-12 text-xs text-gray-700 text-center">
+        Job search strategies &<br/>interview preparation
+      </div>
+    </div>
+  </div>
+</div>
+
 </section>
 
 
@@ -1076,6 +1531,11 @@ const testimonials = [
     text: `"Everything suddenly made sense. I landed my first internship because of this course."`,
     name: "Priya, Marketing Intern",
   },
+  {
+    img: "https://randomuser.me/api/portraits/men/68.jpg",
+    text: `"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus quibusdam totam ducimus qui soluta ut sit quis molestias eius debitis."`,
+    name: "Bishnu, MIT Student",
+  }
 ];
 
 let current = 0;
@@ -1103,8 +1563,8 @@ function updateQueueAnimated(next) {
   let q2 = (next + 2) % testimonials.length;
   const queueDiv = document.getElementById('queue');
   queueDiv.innerHTML = `
-    <img id="queue1" src="${testimonials[q1].img}" class="h-24 w-24 rounded-md object-cover grayscale bg-gray-200 shadow opacity-0" />
-    <img id="queue2" src="${testimonials[q2].img}" class="h-24 w-24 rounded-md object-cover grayscale bg-gray-200 shadow opacity-0" />
+    <img id="queue1" src="${testimonials[q1].img}" class="h-40 w-40 rounded-md object-cover grayscale bg-gray-200 shadow opacity-0" />
+    <img id="queue2" src="${testimonials[q2].img}" class="h-40 w-40 rounded-md object-cover grayscale bg-gray-200 shadow opacity-0" />
   `;
   // Animate both right side images with fade/slide from right to left
   setTimeout(() => {
