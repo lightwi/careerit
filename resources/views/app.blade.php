@@ -18,7 +18,132 @@
 
 <body class="bg-b-main">
 
+<nav class="bg-white shadow-lg">
+  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <!-- Camera Icon -->
+    <i class="fa-solid fa-camera text-c-main"></i>
+    
+    <!-- Navigation Links and Buttons -->
+    <div class="flex items-center gap-6 mt-1">
+      <!-- Navigation Links (replace with actual links) -->
+      <div class="hidden md:flex gap-6 font-roboto items-center">
+        <a href="#" class="text-t-second hover:text-c-main text-[16px] font-normal transition">Home</a>
+        <a href="#" class="ext-t-second hover:text-c-main text-[16px] font-normal transition">Career</a>
+        <a href="#" class="ext-t-second hover:text-c-main text-[16px] font-normal transition">Case Studies</a>
+        <a href="#" class="ext-t-second hover:text-c-main text-[16px] font-normal transition">News & trend</a>
+        <a href="#" class="ext-t-second hover:text-c-main text-[16px] font-normal transition">Blog</a>
+        <a href="#" class="ext-t-second hover:text-c-main text-[16px] font-normal transition">Contact</a>
+      </div>
+      
+      <!-- Buttons Container -->
+      <div class="flex flex-col sm:flex-row gap-3">
+        <!-- Free Roadmap Button -->
+        <button class="font-roboto bg-c-main hover:bg-[#E1663C] text-white rounded-lg text-sm h-11 px-4 flex items-center justify-center transition-colors">
+          Get your free roadmap
+        </button>
+        
+        <!-- Meet Button -->
+        <button class="font-roboto bg-black hover:bg-gray-800 text-white rounded-lg text-sm h-11 px-4 flex items-center justify-center gap-2 transition-colors">
+          <i class="fa-solid fa-video"></i>
+          Meet Roheet Rajput
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
   @yield('content')
+
+  <!-- HERO SECTION -->
+  <section class="relative bg-gradient-to-b from-[#111111] via-[#0D151A] to-[#1D252E] flex flex-col items-center justify-center py-32 text-center autoflow">
+    <h2 class="text-[64px] font-poppins font-medium leading-[106px] tracking-[-0.02em] text-center mb-6 px-4">
+      <span class="bg-gradient-to-r from-white to-c-main bg-clip-text text-transparent">
+        Build a digital career that fits you.
+      </span>
+    </h2>
+    <p class="text-[#b0b0b0] font-roboto text-[24px]/7 font-light tracking-[0.04em] text-center mb-8 px-4 max-w-2xl mx-auto">
+      Thousands have already taken the first step.<br>
+      You're next. Start your roadmap. Learn with purpose.
+    </p>
+    <button class="bg-[#FF7F4C] hover:bg-[#FF6732] text-white rounded-[16px] w-[240px] h-[56px] py-[14px] px-[16px] gap-2 font-roboto font-medium text-base leading-[24px] tracking-[0.02em] transition-colors duration-200
+    ">
+      Get my free roadmap
+    </button>
+  </section>
+
+
+  <!-- FOOTER SECTION -->
+  <footer class="bg-black pt-16 pb-8 px-6 md:px-24 border-t border-[#232323]">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-5 gap-12 py-8 text-sm">
+      <!-- Career Into IT -->
+      <div class="col-span-2">
+        <h2 class="font-poppins text-t-white font-semibold text-[28.42px] leading-[100%] tracking-[0%] mb-4">
+          Career Into IT
+        </h2>
+        <p class="font-roboto text-t-white font-light text-[18px] leading-[30px] tracking-[0.06em] mb-6">
+          Real stories. Real steps. Your path to a digital career starts here — with honest, beginner-friendly guidance.
+        </p>
+        <div class="flex space-x-4">
+          <a href="#" class="text-[#b0b0b0] hover:text-white transition-colors duration-200">
+            <i class="fa-brands fa-x-twitter text-t-white bg-c-main w-6 h-6 flex items-center justify-center"></i>
+          </a>
+          <a href="#" class="text-[#b0b0b0] hover:text-white transition-colors duration-200">
+            <i class="fa-brands fa-facebook-f text-t-white bg-blue-600 w-6 h-6 flex items-center justify-center"></i>
+          </a>
+          <a href="#" class="text-[#b0b0b0] hover:text-white transition-colors duration-200">
+            <i class="fa-brands fa-instagram text-t-white bg-red-600 w-6 h-6 flex items-center justify-center"></i>
+          </a>
+          <a href="#" class="text-[#b0b0b0] hover:text-white transition-colors duration-200">
+            <i class="fa-brands fa-linkedin-in text-t-white bg-blue-600 w-6 h-6 flex items-center justify-center"></i>
+          </a>
+        </div>
+      </div>
+      <!-- Explore -->
+      <div>
+        <h3 class="font-poppins font-medium text-xl text-t-white leading-[100%] tracking-[0%] mb-2 relative">Explore</h3>
+        <div class="py-0.5 mb-6 bg-c-main w-[20%]"></div>
+        <ul class="space-y-3">
+          <li><a href="#" class="text-t-white text-[18px] font-roboto font-normal hover:text-c-main pb-1 hover:border-b-2 hover:border-c-main">Home</a></li>
+          <li><a href="#" class="text-t-white text-[18px] font-roboto font-normal hover:text-c-main pb-1 hover:border-b-2 hover:border-c-main">Career paths</a></li>
+          <li><a href="#" class="text-t-white text-[18px] font-roboto font-normal hover:text-c-main pb-1 hover:border-b-2 hover:border-c-main">Case studies</a></li>
+        </ul>
+      </div>
+      <!-- Connect -->
+      <div>
+        <h3 class="font-poppins font-medium text-xl text-t-white leading-[100%] tracking-[0%] mb-2">Connect</h3>
+        <div class="py-0.5 mb-6 bg-c-main w-[30%]"></div>
+        <ul class="space-y-3">
+          <li><a href="#" class="text-t-white text-[18px] font-roboto font-normal hover:text-c-main pb-1 hover:border-b-2 hover:border-c-main">Contact</a></li>
+          <li><a href="#" class="text-t-white text-[18px] font-roboto font-normal hover:text-c-main pb-1 hover:border-b-2 hover:border-c-main">Privacy Policy</a></li>
+          <li><a href="#" class="text-t-white text-[18px] font-roboto font-normal hover:text-c-main pb-1 hover:border-b-2 hover:border-c-main">Terms of service</a></li>
+          <li><a href="#" class="text-t-white text-[18px] font-roboto font-normal hover:text-c-main pb-1 hover:border-b-2 hover:border-c-main">Sitemap</a></li>
+        </ul>
+      </div>
+      <!-- Get you free roadmap -->
+      <div>
+        <h3 class="font-poppins font-medium text-xl text-t-white leading-[100%] tracking-[0%] mb-2">Get you free roadmap</h3>
+        <div class="py-0.5 mb-6 bg-c-main w-[70%]"></div>
+        <ul class="space-y-3 mt-4">
+          <li><a href="#" class="text-t-white text-[18px] font-roboto font-normal hover:text-c-main pb-1 hover:border-b-2 hover:border-c-main">Blog</a></li>
+          <li><a href="#" class="text-t-white text-[18px] font-roboto font-normal hover:text-c-main pb-1 hover:border-b-2 hover:border-c-main">Meet Rohit Rajput</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- Footer Bottom -->
+    <div class="border-t border-[#232323] mt-12 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-[#b0b0b0]">
+      <span class="font-roboto font-light text-[14px] leading-[100%] tracking-[0.05em] mb-4 md:mb-0">
+        © Career Into IT. All Rights Reserved.
+      </span>
+      <div class="flex justify-end items-center gap-4">
+        <p class="font-roboto text-lg font-normal">Back to top</p>
+        <div class="group">
+          <a href="#" class="p-2 border-2 border-c-main rounded-lg transition-colors duration-200 group-hover:bg-c-main group-hover:text-white">
+          <i class="fa-solid fa-arrow-up text-c-main group-hover:text-t-white"></i>
+        </a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <!-- scripts -->
   <script src="{{ asset('vendor/bootstrap/jquery.min.js') }}"></script>
@@ -37,7 +162,8 @@
             'b-main': '#FAFAFA',
             'c-main': '#F76E40',
             't-first': '#00031F',
-            't-second': '#33354C'
+            't-second': '#33354C',
+            't-white': '#ffffff',
           },
         },
       },

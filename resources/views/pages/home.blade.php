@@ -98,6 +98,7 @@ body {
 
 @section('content')
 
+<!-- hero section section -->
 <section class="container mx-auto px-4 md:px-0">
     <div
         class="flex flex-col lg:flex-row w-full py-8 sm:py-10 lg:py-16 xl:py-24 2xl:py-28"
@@ -246,6 +247,8 @@ body {
 </section>
 
 
+
+<!-- services section -->
 <section class="bg-white autoflow">
     <div class="container mx-auto px-4 md:px-0">
         <div
@@ -430,7 +433,7 @@ body {
 </section>
 
 
-
+<!-- features and table section -->
 <section
     class="container mx-auto py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 2xl:py-24 autoflow"
 >
@@ -894,6 +897,9 @@ body {
     </div>
 </section>
 
+
+
+<!-- get ready section -->
 <section class="bg-c-main autoflow">
     <div
         class="container mx-auto py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 2xl:py-24"
@@ -972,7 +978,7 @@ body {
 </section>
 
 
-
+<!-- image card section -->
 <section class="bg-b-main autoflow">
     <div
         class="container mx-auto px-4 md:px-0 py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 2xl:py-24"
@@ -1119,6 +1125,9 @@ body {
     </div>
 </section>
 
+
+
+<!-- meet section section -->
 <section
     class="relative bg-cover bg-center autoflow"
     style="background-image: url('{{ asset('assets/face.png') }}')"
@@ -1179,215 +1188,24 @@ body {
     </div>
 </section>
 
-<section class="autoflow">
-    <div
-        class="container mx-auto px-4 md:px-0 py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 2xl:py-24"
-    >
-        <div
-            class="flex flex-col gap-4 sm:gap-6 lg:flex-row lg:justify-between lg:gap-12"
-        >
-            <div class="lg:w-[40%]">
-                <h2
-                    class="font-poppins font-medium text-[36px] leading-[48px] tracking-[-0.02em] text-t-first"
-                >
-                    Got any question
-                </h2>
-                <p
-                    class="font-roboto font-light text-[20px] leading-[27px] tracking-[0.02em] text-t-second mt-4"
-                >
-                    We've helped hundreds of people who felt the same way. So
-                    before you decide, here are the answers to the most common
-                    questions — answered with honesty, not hype.
-                </p>
-            </div>
-
-            <div class="text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 font-light max-w-prose lg:w-[50%]">
-                <!-- Accordion Item 1 -->
-                <div class="overflow-hidden transition-all duration-300 mb-1 rounded-lg">
-                    <input
-                        type="checkbox"
-                        id="accordion-1"
-                        class="hidden peer"
-                        checked
-                    />
-                    <label
-                        for="accordion-1"
-                        class="flex justify-between items-center p-5 cursor-pointer bg-gray-50 hover:bg-white transition-all duration-200 peer-checked:bg-white peer-checked:text-c-main"
-                    >
-                        <h2 class="font-poppins font-medium text-[18px] leading-[28px] tracking-[0]">
-                            Do I need experience or a tech background to start?
-                        </h2>
-                        <svg
-                            class="w-6 h-6 text-gray-600 transition-all duration-300 transform peer-checked:rotate-180 peer-checked:text-white"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M19 9l-7 7-7-7"
-                            />
-                        </svg>
-                    </label>
-                    <div
-                        class="overflow-hidden transition-all duration-300 max-h-0 peer-checked:max-h-[500px] bg-white"
-                    >
-                        <div class="p-5 pt-0 text-gray-600">
-                            <p class="font-poppins font-light text-[16px] leading-[26px] tracking-[0.02em]">
-                                Not at all. In fact, CareerIntoIT was built for
-                                people with no prior experience. Whether you're
-                                in retail, hospitality, or just out of uni,
-                                we'll help you understand exactly where to begin
-                                and what skills matter most.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Accordion Item 2 -->
-                <div class="overflow-hidden transition-all duration-300 mb-1 rounded-lg">
-                    <input
-                        type="checkbox"
-                        id="accordion-2"
-                        class="hidden peer"
-                    />
-                    <label
-                        for="accordion-2"
-                        class="flex justify-between items-center p-5 cursor-pointer bg-gray-50 hover:bg-white transition-all duration-200 peer-checked:bg-white peer-checked:text-c-main"
-                    >
-                        <h2 class="font-poppins font-medium text-[18px] leading-[28px] tracking-[0]">
-                            How is this roadmap different from other free guides?
-                        </h2>
-                        <svg
-                            class="w-6 h-6 text-gray-600 transition-all duration-300 transform peer-checked:rotate-180 peer-checked:text-white"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M19 9l-7 7-7-7"
-                            />
-                        </svg>
-                    </label>
-                    <div
-                        class="overflow-hidden transition-all duration-300 max-h-0 peer-checked:max-h-[500px] bg-white"
-                    >
-                        <div class="p-5 pt-0 text-gray-600">
-                            <p class="font-poppins font-light text-[16px] leading-[26px] tracking-[0.02em]">
-                                Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex
-                                ea commodo consequat.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Accordion Item 3 -->
-                <div class="overflow-hidden transition-all duration-300 mb-1 rounded-lg">
-                    <input
-                        type="checkbox"
-                        id="accordion-3"
-                        class="hidden peer"
-                    />
-                    <label
-                        for="accordion-3"
-                        class="flex justify-between items-center p-5 cursor-pointer bg-gray-50 hover:bg-white transition-all duration-200 peer-checked:bg-white peer-checked:text-c-main"
-                    >
-                        <h2 class="font-poppins font-medium text-[18px] leading-[28px] tracking-[0]">
-                            What if I'm already working or studying full-time?
-                        </h2>
-                        <svg
-                            class="w-6 h-6 text-gray-600 transition-all duration-300 transform peer-checked:rotate-180 peer-checked:text-white"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M19 9l-7 7-7-7"
-                            />
-                        </svg>
-                    </label>
-                    <div
-                        class="overflow-hidden transition-all duration-300 max-h-0 peer-checked:max-h-[500px] bg-white"
-                    >
-                        <div class="p-5 pt-0 text-gray-600">
-                            <p class="font-poppins font-light text-[16px] leading-[26px] tracking-[0.02em]">
-                                Duis aute irure dolor in reprehenderit in
-                                voluptate velit esse cillum dolore eu fugiat
-                                nulla pariatur.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Accordion Item 4 -->
-                <div class="overflow-hidden transition-all duration-300 mb-1 rounded-lg">
-                    <input
-                        type="checkbox"
-                        id="accordion-4"
-                        class="hidden peer"
-                    />
-                    <label
-                        for="accordion-4"
-                        class="flex justify-between items-center p-5 cursor-pointer bg-gray-50 hover:bg-white transition-all duration-200 peer-checked:bg-white peer-checked:text-c-main"
-                    >
-                        <h2 class="font-poppins font-medium text-[18px] leading-[28px] tracking-[0]">
-                            I'm not sure which digital career is right for me. Can you help?
-                        </h2>
-                        <svg
-                            class="w-6 h-6 text-gray-600 transition-all duration-300 transform peer-checked:rotate-180 peer-checked:text-white"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M19 9l-7 7-7-7"
-                            />
-                        </svg>
-                    </label>
-                    <div
-                        class="overflow-hidden transition-all duration-300 max-h-0 peer-checked:max-h-[500px] bg-white"
-                    >
-                        <div class="p-5 pt-0 text-gray-600">
-                            <p class="font-poppins font-light text-[16px] leading-[26px] tracking-[0.02em]">
-                                Duis aute irure dolor in reprehenderit in
-                                voluptate velit esse cillum dolore eu fugiat
-                                nulla pariatur.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
+<!-- question section -->
+@include('includes.qa')
 
 
+<!-- testimonials section -->
 <section class="bg-[#fff4f0] py-24 autoflow">
     <div class="container mx-auto flex flex-col">
     <!-- Main slider grid -->
 
     <div
-            class="flex flex-col gap-4 sm:gap-6 lg:flex-row lg:justify-between lg:gap-12 pb-8 md:pb-10 lg:pb-16 xl:pb-20 2xl:pb-24">
-            <h2 class="font-poppins font-medium text-[36px] leading-[48px] tracking-[-0.02em]">
-                What Our Learners Say
-            </h2>
-            <p class="font-roboto font-light text-[20px] leading-[30px] tracking-[0.02em] text-gray-600 max-w-prose lg:w-[50%]">
-                When you’re starting something new, it helps to hear from people who’ve been where you are. These are real stories from learners and career-changers who took the first step — just like you're about to.
-            </p>
-        </div>
+        class="flex flex-col gap-4 sm:gap-6 lg:flex-row lg:justify-between lg:gap-12 pb-8 md:pb-10 lg:pb-16 xl:pb-20 2xl:pb-24">
+        <h2 class="font-poppins font-medium text-[36px] leading-[48px] tracking-[-0.02em]">
+            What Our Learners Say
+        </h2>
+        <p class="font-roboto font-light text-[20px] leading-[30px] tracking-[0.02em] text-gray-600 max-w-prose lg:w-[50%]">
+            When you’re starting something new, it helps to hear from people who’ve been where you are. These are real stories from learners and career-changers who took the first step — just like you're about to.
+        </p>
+    </div>
 
     <div class="flex w-full p-4 gap-6 rounded-lg">
         <!-- Left Main Testimonial -->
@@ -1414,75 +1232,8 @@ body {
 </section>
 
 
-
-<section class="py-12 bg-white">
-
-<div class="w-full flex flex-col items-center py-12 bg-white">
-  <div class="relative w-[90%] mx-auto">
-    <!-- Timeline base line -->
-    <div class="absolute left-0 top-7 w-full h-1 bg-gray-200 z-0"></div>
-    <!-- Progress line -->
-    <div class="absolute left-0 top-7 h-1 bg-orange-500 z-10" style="width:40%"></div>
-
-    <!-- Timeline Dots and Floating Box -->
-    <div class="flex justify-between items-center w-full relative z-20">
-      <!-- Dot 1 -->
-      <div class="flex flex-col items-center w-1/5 mt-[21px]">
-        <div class="w-4 h-4 rounded-full bg-orange-500 border-2 border-white"></div>
-      </div>
-      <!-- Dot 2 + Floating Box -->
-      <div class="flex flex-col items-center w-1/5 relative mt-[21px]">
-        <div class="w-4 h-4 rounded-full bg-orange-500 border-2 border-white"></div>
-        <!-- Floating box above the line -->
-        <div class="absolute -top-14 left-1/2 right-1/2 -translate-x-1/2">
-          <div class="bg-orange-500 text-white text-[11px] px-3 py-1.5 rounded shadow w-56 text-center">
-            Exactly what skills to learn <br />(with free & paid options)
-          </div>
-        </div>
-      </div>
-      <!-- Dot 3 -->
-      <div class="flex flex-col items-center w-1/5 mt-[21px]">
-        <div class="w-4 h-4 rounded-full bg-gray-200 border-2 border-white"></div>
-      </div>
-      <!-- Dot 4 -->
-      <div class="flex flex-col items-center w-1/5 relative mt-[21px]">
-        <div class="w-4 h-4 rounded-full bg-gray-200 border-2 border-white"></div>
-        <!-- Floating box above the line -->
-        <div class="absolute -top-14 left-1/2 right-1/4 -translate-x-1/2">
-          <div class="bg-white text-[11px] text-gray-700 px-3 py-1.5 rounded w-56 text-center">
-            Exactly what skills to learn <br />(with free & paid options)
-          </div>
-        </div>
-      </div>
-      <!-- Dot 5 -->
-      <div class="flex flex-col items-center w-1/5 mt-[21px]">
-        <div class="w-4 h-4 rounded-full bg-gray-200 border-2 border-white"></div>
-      </div>
-    </div>
-
-    <!-- Descriptions under each dot -->
-    <div class="flex justify-between items-center w-full mt-8">
-      <div class="w-1/4 ml-12 text-xs text-gray-700 text-center">
-        The 5 fastest-growing<br/>digital careers in 2025
-      </div>
-      <div class="w-1/4 text-xs text-gray-700 text-center">
-        
-      </div>
-      <div class="w-1/4 ml-12 text-xs text-gray-700 text-center">
-        What to do week by week<br/>for your chosen path
-      </div>
-      <div class="w-1/4 text-xs text-gray-700 text-center">
-        
-      </div>
-      <div class="w-1/4 ml-12 text-xs text-gray-700 text-center">
-        Job search strategies &<br/>interview preparation
-      </div>
-    </div>
-  </div>
-</div>
-
-</section>
-
+<!-- timeline section -->
+@include('includes.timeline')
 
 @endsection 
 
