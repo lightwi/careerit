@@ -10,4 +10,14 @@ class FrontController extends Controller
     {
         return view('pages.home');
     }
+
+    public function services()
+    {
+        return view('pages.services');
+    }
+
+    public function pages()
+    {
+        return view('pages.pages');
+    }
 }
