@@ -20,4 +20,9 @@ class FrontController extends Controller
     {
         return view('pages.pages');
     }
+
+    public function roadmap()
+    {
+        return view('pages.roadmap');
+    }
 }

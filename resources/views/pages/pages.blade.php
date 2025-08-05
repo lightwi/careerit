@@ -32,11 +32,6 @@ Services
 
 @section('content')
 
-
-
-
-
-
 <section class="container mx-auto py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 2xl:py-24 autoflow">
 
   <div class="flex flex-col gap-4 sm:gap-6 lg:flex-row lg:justify-between lg:items-center lg:gap-12">

@@ -141,39 +141,39 @@ body {
 @section('content')
 
 <!-- hero section section -->
-<section class="container mx-auto px-4 md:px-0">
+<section class="container mx-auto md:px-0">
   <div class="flex flex-col lg:flex-row w-full py-4 sm:py-6 lg:py-8 xl:py-16 2xl:py-20">
     <!-- Text Column -->
     <div class="w-full lg:w-1/2 p-4 sm:p-6 md:p-8 lg:p-0 flex flex-col justify-center mr-4">
       <span
-        class="px-2 py-1 bg-white border-2 border-gray-300 rounded-lg font-roboto font-normal text-sm leading-5 tracking-wide text-center text-c-main w-fit mb-4 sm:mb-6">#
+        class="px-2 py-2 bg-white border-2 border-gray-300 rounded-lg font-roboto font-normal text-sm leading-5 tracking-wide text-center text-c-main w-full md:w-fit mb-4 sm:mb-6">#
         Roadmap to Digital Success</span>
-      <h1 class="font-poppins font-medium text-[60px] leading-[64px] tracking-[-0.015em] mb-3 sm:mb-4">
+      <h1 class="font-poppins font-medium text-4xl text-center leading-[50px] my-[14px] tracking-[-1.5%] md:text-[60px] md:text-left md:leading-[64px] md:tracking-[-0.015em] mb-3 sm:mb-4">
         Your Road Map to Digital
-        <span class="font-poppins font-medium text-[60px] leading-[64px] tracking-[-0.015em] text-c-main">Success</span>
+        <span class="font-poppins font-medium text-c-main">Success</span>
       </h1>
-      <p class="font-roboto font-light text-[20px] leading-[30px] tracking-[0.02em] mb-6 sm:mb-8 text-t-second">
+      <p class="font-roboto font-light text-base md:text-xl loading-6 md:leading-[30px] tracking-[2%] text-center md:text-left mb-6 sm:mb-8 text-t-second">
         Explore proven career paths, learn from real-world SEO case
         studies, and browse expert blogs everything you need to grow in
         digital and IT, all in one place. ...
       </p>
       <div class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
         <button
-          class="font-roboto bg-c-main hover:bg-[#E1663C] text-white rounded-[16px] w-[210px] h-[56px] px-[16px] py-[14px] gap-2 flex items-center justify-center">
+          class="font-roboto bg-c-main text-base hover:bg-[#E1663C] text-white rounded-[16px] w-full md:w-[210px] h-[56px] px-[16px] py-[14px] gap-2 flex items-center justify-center">
           Start Exploring Careers
         </button>
         <button
-          class="font-roboto bg-black hover:bg-gray-900 text-white rounded-[16px] w-[226px] h-[56px] px-[16px] py-[14px] flex items-center justify-center gap-2">
+          class="font-roboto bg-black text-base hover:bg-gray-900 text-white rounded-[16px] w-full md:w-[226px] h-[56px] px-[16px] py-[14px] flex items-center justify-center gap-2">
           Start Exploring Careers
           <i class="fa-solid fa-arrow-right"></i>
         </button>
       </div>
       <p
-        class="font-roboto font-light text-t-second text-[14px] leading-[100%] tracking-[0.06em] mt-3 sm:mt-4 mb-3 sm:mb-4">
+        class="font-roboto font-light text-t-second text-[14px] text-center md:text-left leading-[100%] tracking-[0.06em] mt-3 sm:mt-4 mb-3 sm:mb-4">
         No Signup Needed. Start exploring right away.
       </p>
       <!-- Avatar and Rating Section -->
-      <div class="flex items-center gap-3 sm:gap-4">
+      <div class="mx-auto md:mx-0 flex items-center gap-3 sm:gap-4">
         <!-- Avatar Stack -->
         <!-- Avatar Stack -->
         <div class="flex -space-x-2">
@@ -226,7 +226,7 @@ body {
     </div>
 
     <!-- Image Column -->
-    <div class="w-full lg:w-1/2 mt-6 sm:mt-8 lg:mt-0">
+    <div class="w-full lg:w-1/2 px-2 md:px-0 mt-6 sm:mt-8 lg:mt-0">
       <img src="{{ asset('assets/graphics/hero.png') }}" alt="Description" class="w-full h-auto object-cover"
         style="min-height: 250px" loading="lazy" />
 
@@ -241,12 +241,12 @@ body {
   <div class="container mx-auto px-4 md:px-0">
     <div
       class="flex flex-col gap-4 sm:gap-6 lg:flex-row lg:justify-between lg:items-center lg:gap-12 py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 2xl:py-24">
-      <h2 class="font-poppins font-medium text-t-first text-[36px] leading-[48px] tracking-[-0.02em] lg:w-[40%]">
-        What you'll find inside <br class="hidden xs:block" />
+      <h2 class="font-poppins font-semibold md:font-medium text-center md:text-left text-t-first text-2xl md:text-[36px] leading-[32px] md:leading-[48px] tracking-[-2%] md:tracking-[-0.02em] lg:w-[40%]">
+        What you'll find inside <br class="hidden md:block" />
         careerintoIt
       </h2>
       <p
-        class="font-roboto font-light text-[20px] leading-[30px] tracking-[0.02em] text-t-second max-w-prose lg:w-[40%]">
+        class="font-roboto font-light text-center md:text-left text-base md:text-xl leading-[24px] md;leading-[30px] tracking-[2%] md:tracking-[0.02em] text-t-second max-w-prose lg:w-[40%]">
         Learn. Explore. Take action — whether you're just starting or
         scaling your digital career.
       </p>
@@ -260,10 +260,10 @@ body {
           <div class="w-14 h-14 bg-white text-c-main rounded-full flex items-center justify-center mb-8">
             <i class="fa-solid fa-bullhorn text-2xl"></i>
           </div>
-          <h3 class="font-poppins font-medium text-[20px] leading-none tracking-normal text-secondary mb-32">
+          <h3 class="font-poppins font-medium text-[20px] leading-none tracking-normal text-secondary mb-6 md:mb-32">
             Web Development
           </h3>
-          <p class="font-roboto font-light text-base leading-6 tracking-wide text-white mb-6">
+          <p class="font-roboto font-light text-base leading-6 tracking-wide text-white md:mb-6">
             Step-by-step guides for Digital Marketing and IT careers
             understand the roles, required skills, and how to break
             in, even with no experience.
@@ -285,10 +285,10 @@ body {
             <i class="fa-solid fa-chart-line text-2xl"></i>
           </div>
           <h3
-            class="font-poppins font-medium text-[20px] text-t-first group-hover:text-white leading-none tracking-normal text-secondary mb-32">
+            class="font-poppins font-medium text-[20px] text-t-first group-hover:text-white leading-none tracking-normal text-secondary mb-6 md:mb-32">
             Real SEO Case Studies
           </h3>
-          <p class="font-roboto font-light text-base text-t-second group-hover:text-white leading-6 tracking-wide mb-6">
+          <p class="font-roboto font-light text-base text-t-second group-hover:text-white leading-6 tracking-wide md:mb-6">
             Learn SEO through real business examples how strategies
             are built, executed, and improved to drive traffic and
             revenue.
@@ -311,10 +311,10 @@ body {
             <i class="fa-solid fa-users text-2xl"></i>
           </div>
           <h3
-            class="font-poppins font-medium text-[20px] group-hover:text-white text-t-first leading-none tracking-normal text-secondary mb-32">
+            class="font-poppins font-medium text-[20px] group-hover:text-white text-t-first leading-none tracking-normal text-secondary mb-6 md:mb-32">
             Expert Top Stories
           </h3>
-          <p class="font-roboto font-light text-t-second text-base group-hover:text-white leading-6 tracking-wide mb-6">
+          <p class="font-roboto font-light text-t-second text-base group-hover:text-white leading-6 tracking-wide md:mb-6">
             Get actionable tips, industry insights, and
             beginner-friendly advice to stay ahead in your digital
             journey.
@@ -337,10 +337,10 @@ body {
             <i class="fa-solid fa-phone-volume text-2xl"></i>
           </div>
           <h3
-            class="font-poppins font-medium text-[20px] group-hover:text-white text-t-first leading-none tracking-normal text-secondary mb-32">
+            class="font-poppins font-medium text-[20px] group-hover:text-white text-t-first leading-none tracking-normal text-secondary mb-6 md:mb-32">
             Meet Rohit Rajput
           </h3>
-          <p class="font-roboto font-light text-base text-tsecond group-hover:text-white leading-6 tracking-wide mb-6">
+          <p class="font-roboto font-light text-base text-tsecond group-hover:text-white leading-6 tracking-wide md:mb-6">
             Learn from someone who’s been there, discover Rohit's
             journey, insights, and mentorship across digital
             marketing and SEO.

@@ -18,4 +18,5 @@ Route::controller(FrontController::class)->group(function () {
   Route::get('/', 'index')->name('home');
   Route::get('/services', 'services')->name('services');
   Route::get('/pages', 'pages')->name('pages');
+  Route::get('/roadmap', 'roadmap')->name('roadmap');
 });
