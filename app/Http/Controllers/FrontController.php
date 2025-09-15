@@ -25,4 +25,14 @@ class FrontController extends Controller
     {
         return view('pages.roadmap');
     }
+
+    public function meetrohit()
+    {
+        return view('pages.profilepage');
+    }
+
+    public function aboutpage()
+    {
+        return view('pages.aboutpage');
+    }
 }

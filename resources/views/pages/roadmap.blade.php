@@ -159,7 +159,7 @@ Roadmap
               <i class="fa-solid fa-arrow-trend-up text-c-main fa-lg"></i>
             </div>
             <h5 class="font-poppins font-semibold text-[18px] tracking-[-0.02em] leading-[100%] mt-8">
-              On-Page SEO
+              Technical SEO
             </h5>
             <p class="font-roboto font-light text-base tracking-[0.04em] leading-[25px] mt-2">
               Optimised titles, structure, and content.
@@ -171,7 +171,7 @@ Roadmap
               <i class="fa-solid fa-arrow-trend-up text-c-main fa-lg"></i>
             </div>
             <h5 class="font-poppins font-semibold text-[18px] tracking-[-0.02em] leading-[100%] mt-8">
-              SEO Content
+              Meta Ads & Google Ads
             </h5>
             <p class="font-roboto font-light text-base tracking-[0.04em] leading-[25px] mt-2">
               Built for users, loved by Google
@@ -247,5 +247,30 @@ Roadmap
   </div>
 </section>
 
+
+
+<section class="bg-white">
+  <div class="container mx-auto px-4 md:px-0 py-4 sm:py-6 lg:py-8 xl:py-16 2xl:py-20">
+
+    <div class="flex justify-center items-center gap-6">
+        <hr class="border-2 w-[38px] border-c-main">
+        <p class="font-roboto font-normal text-base tracking-[8%] leading-[100%] text-c-main">My Track Record
+        </p>
+        <hr class="border-2 w-[38px] border-c-main">
+    </div>
+
+    <h2 class="font-poppins font-medium text-[36px] leading-[100%] tracking-[-0.02em] text-center text-[#00031F] mt-8 mb-4">
+      I’ve Earned My Stripes by Doing the Real Work 
+    </h2>
+    <div class="flex justify-center">
+      <p class="font-roboto md:w-[75%] font-light text-lg leading-[30px] tracking-[4%] text-center">
+        Started in education and training, now the go-to SEO guy for real Australian businesses. I've helped clients go from invisible to seen — from "page 5" to leads every week.
+      </p>
+    </div>
+
+    
+
+  </div>
+</section>
 
 @endsection

@@ -146,7 +146,7 @@ body {
     <!-- Text Column -->
     <div class="w-full lg:w-1/2 p-4 sm:p-6 md:p-8 lg:p-0 flex flex-col justify-center mr-4">
       <span
-        class="px-2 py-2 bg-white border-2 border-gray-300 rounded-lg font-roboto font-normal text-sm leading-5 tracking-wide text-center text-c-main w-full md:w-fit mb-4 sm:mb-6">#
+        class="px-2 py-2 bg-white border-2 border-gray-300 rounded-lg font-roboto font-normal text-sm leading-5 tracking-wide text-center text-c-main w-full md:w-fit mb-4">#
         Roadmap to Digital Success</span>
       <h1 class="font-poppins font-medium text-4xl text-center leading-[50px] my-[14px] tracking-[-1.5%] md:text-[60px] md:text-left md:leading-[64px] md:tracking-[-0.015em] mb-3 sm:mb-4">
         Your Road Map to Digital
