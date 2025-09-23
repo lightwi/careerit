@@ -21,4 +21,5 @@ Route::controller(FrontController::class)->group(function () {
   Route::get('/roadmap', 'roadmap')->name('roadmap');
   Route::get('/meetrohit', 'meetrohit')->name('meetrohit');
   Route::get('/about', 'aboutpage')->name('about');
+  Route::get('/contact', 'contact')->name('contact');
 });

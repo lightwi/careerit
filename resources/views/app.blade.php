@@ -121,7 +121,8 @@
         <!-- END Mega Menu Wrapper -->
 
         <a href="#" class="text-t-second hover:text-c-main text-[16px] font-normal transition">Blog</a>
-        <a href="#" class="text-t-second hover:text-c-main text-[16px] font-normal transition">Contact</a>
+        <a href="{{ route('about') }}" class="text-t-second hover:text-c-main text-[16px] font-normal transition">About</a>
+        <a href="{{ route('contact') }}" class="text-t-second hover:text-c-main text-[16px] font-normal transition">Contact</a>
       </div>
       <!-- Buttons Omitted for Brevity (keep your original) -->
       <div class="flex flex-col sm:flex-row sm:items-center gap-3">

@@ -35,4 +35,9 @@ class FrontController extends Controller
     {
         return view('pages.aboutpage');
     }
+
+    public function contact()
+    {
+        return view('pages.contact');
+    }
 }
