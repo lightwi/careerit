@@ -1,4 +1,4 @@
-<section class="bg-white py-6 sm:py-10 lg:py-16 xl:py-20 2xl:py-24">
+<section class="bg-white py-6 sm:py-10 lg:py-16 xl:py-20 2xl:py-24 px-4 md:px-0">
   <div class="bg-white container mx-auto text-center rounded-xl shadow-lg p-8">
     <!-- Avatars -->
     <div class="flex justify-center mb-4">
@@ -33,7 +33,7 @@
         Get in touch
       </button>
 
-      <img src="{{ asset('assets/graphics/aboutarrow.png') }}" alt="" srcset="" class="absolute -bottom-[30px] -right-[180px] w-40 h-[150px]">
+      <img src="{{ asset('assets/graphics/aboutarrow.png') }}" alt="" srcset="" class="hidden md:block md:absolute -bottom-[30px] -right-[180px] w-40 h-[150px]">
     </div>
   </div>
 </section>

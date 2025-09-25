@@ -19,7 +19,7 @@
                         class="flex justify-between items-center w-full p-5 cursor-pointer bg-gray-50 hover:bg-white transition-all duration-200"
                         :class="{'bg-white text-c-main': openAccordion === 1}"
                     >
-                        <h2 class="font-poppins font-medium text-[18px] leading-[28px] tracking-[0]">
+                        <h2 class="text-left font-poppins font-medium text-[18px] leading-[28px] tracking-[0]">
                             Do I need experience or a tech background to start?
                         </h2>
                         <svg
@@ -61,7 +61,7 @@
                         class="flex justify-between items-center w-full p-5 cursor-pointer bg-gray-50 hover:bg-white transition-all duration-200"
                         :class="{'bg-white text-c-main': openAccordion === 2}"
                     >
-                        <h2 class="font-poppins font-medium text-[18px] leading-[28px] tracking-[0]">
+                        <h2 class="text-left font-poppins font-medium text-[18px] leading-[28px] tracking-[0]">
                             How is this roadmap different from other free guides?
                         </h2>
                         <svg
@@ -101,7 +101,7 @@
                         class="flex justify-between items-center w-full p-5 cursor-pointer bg-gray-50 hover:bg-white transition-all duration-200"
                         :class="{'bg-white text-c-main': openAccordion === 3}"
                     >
-                        <h2 class="font-poppins font-medium text-[18px] leading-[28px] tracking-[0]">
+                        <h2 class="text-left font-poppins font-medium text-[18px] leading-[28px] tracking-[0]">
                             What if I'm already working or studying full-time?
                         </h2>
                         <svg
@@ -141,7 +141,7 @@
                         class="flex justify-between items-center w-full p-5 cursor-pointer bg-gray-50 hover:bg-white transition-all duration-200"
                         :class="{'bg-white text-c-main': openAccordion === 4}"
                     >
-                        <h2 class="font-poppins font-medium text-[18px] leading-[28px] tracking-[0]">
+                        <h2 class="text-left font-poppins font-medium text-[18px] leading-[28px] tracking-[0]">
                             I'm not sure which digital career is right for me. Can you help?
                         </h2>
                         <svg

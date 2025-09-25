@@ -12,15 +12,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <script src="{{ asset('vendor/tailwind/tailwind.min.js') }}"></script>
   @stack('stylelinks')
+  <style>
+  .autoflow {
+  animation: text-appear both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 100vh;
+}
+  </style>
   @stack('styles')
 
 </head>
 
-<body class="bg-b-main">
+<body class="bg-b-main" x-data="{ navshow: false }">
 
 
   <nav class="bg-white shadow-lg relative z-10">
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="container mx-auto px-4 md:px-0 py-4 flex justify-between items-center">
       <!-- Camera Icon -->
       <img src="{{ asset('assets/graphics/Logomark.png') }}" width="40px" height="40px" alt="">
       <!-- Navigation Links and Buttons -->
@@ -127,17 +134,78 @@
       <!-- Buttons Omitted for Brevity (keep your original) -->
       <div class="flex flex-col sm:flex-row sm:items-center gap-3">
         <!-- Free Roadmap Button -->
-        <button class="font-roboto bg-c-main hover:bg-[#E1663C] text-white rounded-lg text-sm h-11 px-4 flex items-center justify-center transition-colors">
+        <button class="hidden md:block font-roboto bg-c-main hover:bg-[#E1663C] text-white rounded-lg text-sm h-11 px-4 flex items-center justify-center transition-colors">
+          Get your free roadmap
+        </button>
+
+        <a @click="navshow = !navshow" class="md:hidden"><i class="fa fa-bars fa-lg"></i></a>
+
+        <!-- Meet Button -->
+        <a href="{{ route('meetrohit') }}" 
+          class="hidden md:flex font-roboto bg-black hover:bg-gray-800 text-white rounded-lg text-sm h-11 px-4 items-center justify-center gap-2 transition-colors">
+            <i class="fa-solid fa-video"></i>
+            Meet Roheet Rajput
+        </a>
+      </div>
+    </div>
+
+    <!-- mobile responsive -->
+    <div x-show="navshow">
+    <div class="md:hidden p-4 flex flex-col gap-6 font-roboto items-left">
+        <a href="{{ route('home') }}" class="text-t-second hover:text-c-main text-[16px] font-normal transition">Home</a>
+
+        <div x-data="{ opendropdown: false }">
+        <a @click="opendropdown = !opendropdown" class="text-t-second hover:text-c-main text-[16px] font-normal transition flex items-center gap-1">
+            Career
+            <i class="fa-solid fa-chevron-down text-xs"></i>
+        </a>
+
+        <div x-show="opendropdown" class="ml-4 mt-2">
+          <h4 class="text-md font-bold text-c-main">Digital Marketing</h4>
+
+          <div class="flex flex-col ml-4 gap-6 my-4">
+            <a href="" class="text-t-second hover:text-c-main text-[16px] font-normal transition">Digital Marketing</a>
+            <a href="" class="text-t-second hover:text-c-main text-[16px] font-normal transition">SEO</a>
+            <a href="" class="text-t-second hover:text-c-main text-[16px] font-normal transition">SMM</a>
+            <a href="" class="text-t-second hover:text-c-main text-[16px] font-normal transition">PPC</a>
+            <a href="" class="text-t-second hover:text-c-main text-[16px] font-normal transition">Content Marketing</a>
+            <a href="" class="text-t-second hover:text-c-main text-[16px] font-normal transition">Email Marketing</a>
+            <a href="" class="text-t-second hover:text-c-main text-[16px] font-normal transition">Video Marketing</a>
+          </div>
+
+          <h4 class="text-md font-bold text-c-main">IT</h4>
+
+          <div class="flex flex-col ml-4 gap-6 my-2">
+            <a href="" class="text-t-second hover:text-c-main text-[16px] font-normal transition">Digital Marketing</a>
+            <a href="" class="text-t-second hover:text-c-main text-[16px] font-normal transition">SEO</a>
+            <a href="" class="text-t-second hover:text-c-main text-[16px] font-normal transition">SMM</a>
+            <a href="" class="text-t-second hover:text-c-main text-[16px] font-normal transition">PPC</a>
+            <a href="" class="text-t-second hover:text-c-main text-[16px] font-normal transition">Content Marketing</a>
+            <a href="" class="text-t-second hover:text-c-main text-[16px] font-normal transition">Email Marketing</a>
+            <a href="" class="text-t-second hover:text-c-main text-[16px] font-normal transition">Video Marketing</a>
+          </div>
+        </div>
+        </div>
+
+        <a href="#" class="text-t-second hover:text-c-main text-[16px] font-normal transition">Blog</a>
+        <a href="{{ route('about') }}" class="text-t-second hover:text-c-main text-[16px] font-normal transition">About</a>
+        <a href="{{ route('contact') }}" class="text-t-second hover:text-c-main text-[16px] font-normal transition">Contact</a>
+
+        <!-- Free Roadmap Button -->
+        <button class="md:hidden font-roboto bg-c-main hover:bg-[#E1663C] text-white rounded-lg text-sm h-11 px-4 flex items-center justify-center transition-colors">
           Get your free roadmap
         </button>
 
         <!-- Meet Button -->
-        <a href="{{ route('meetrohit') }}" class="font-roboto bg-black hover:bg-gray-800 text-white rounded-lg text-sm h-11 px-4 flex items-center justify-center gap-2 transition-colors">
-          <i class="fa-solid fa-video"></i>
-          Meet Roheet Rajput
+        <a href="{{ route('meetrohit') }}" 
+          class="md:hidden flex font-roboto bg-black hover:bg-gray-800 text-white rounded-lg text-sm h-11 px-4 items-center justify-center gap-2 transition-colors">
+            <i class="fa-solid fa-video"></i>
+            Meet Roheet Rajput
         </a>
       </div>
+      </div>
     </div>
+
   </nav>
 
   @yield('content')

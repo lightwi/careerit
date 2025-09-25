@@ -40,4 +40,24 @@ class FrontController extends Controller
     {
         return view('pages.contact');
     }
+
+    public function blog()
+    {
+        return view('pages.blog');
+    }
+
+    public function category()
+    {
+        return view('pages.category');
+    }
+
+    public function search()
+    {
+        return view('pages.search');
+    }
+
+    public function singlepost()
+    {
+        return view('pages.singlepost');
+    }
 }

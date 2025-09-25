@@ -1,4 +1,4 @@
-<section class="py-12 bg-white autoflow">
+<section class="hidden md:block py-12 bg-white autoflow">
     <div class="w-full flex flex-col items-center py-12 bg-white">
         <div class="container mx-auto">
             <div

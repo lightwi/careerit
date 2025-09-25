@@ -58,12 +58,6 @@ Home
 </style>
 
 <style>
-.autoflow {
-  animation: text-appear both;
-  animation-timeline: view();
-  animation-range: entry 10% cover 100vh;
-}
-
 @keyframes text-appear {
   from {
     opacity: 0;
@@ -373,364 +367,362 @@ body {
 
 
 <!-- features and table section -->
-<section class="container mx-auto py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 2xl:py-24 autoflow">
-  <div class="flex flex-col gap-4 sm:gap-6 lg:flex-row lg:justify-between lg:items-center lg:gap-12">
-    <h2 class="font-poppins font-medium text-[36px] text-t-first leading-[48px] tracking-[-0.02em] lg:w-[40%]">
-      Why Digital & IT Careers Are <br class="hidden xs:block" />
-      the Smartest Bet in 2025
-    </h2>
-    <p class="font-roboto font-light text-[20px] leading-[30px] tracking-[0.02em] text-t-second max-w-prose lg:w-[40%]">
-      The world is moving online, and skilled digital professionals are in
-      demand. Here's why it's the best time to start your journey.
-    </p>
-  </div>
-
-  <div class="container-wrapper autoflow">
-
-    <div class="bg-white border border-gray-300 p-8 mt-12 rounded-lg topflow">
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
-        <div class="p-8">
-          <div class="flex items-center gap-2 text-c-main">
-            <i class="fa-solid fa-circle fa-xs"></i>
-            <p class="font-inter font-medium text-[16px] leading-[24px] tracking-[0.06em]">
-              Digital Marketing
+<section class="container mx-auto px-4 py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 2xl:py-24 autoflow">
+        <div class="flex flex-col gap-4 sm:gap-6 lg:flex-row lg:justify-between lg:items-center lg:gap-12">
+            <h2 class="font-poppins font-medium text-2xl sm:text-3xl md:text-4xl lg:text-[36px] text-t-first leading-tight sm:leading-snug lg:leading-[48px] tracking-[-0.02em] lg:w-[45%]">
+                Why Digital & IT Careers Are <br class="hidden sm:block" />
+                the Smartest Bet in 2025
+            </h2>
+            <p class="font-roboto font-light text-base sm:text-lg md:text-xl lg:text-[20px] leading-relaxed sm:leading-loose lg:leading-[30px] tracking-[0.02em] text-t-second max-w-prose lg:w-[45%]">
+                The world is moving online, and skilled digital professionals are in
+                demand. Here's why it's the best time to start your journey.
             </p>
-          </div>
-
-          <div class="my-8">
-            <h4 class="font-poppins font-normal text-t-first text-[24px] leading-[100%] tracking-[-0.01em]">
-              A $598 Billion Industry on the Rise
-            </h4>
-            <p class="font-roboto font-light text-t-second text-[18px] leading-[28px] tracking-[0.02em] my-2">
-              The global digital marketing industry was valued at
-              approximately $598.58 billion in 2024 and is projected
-              to grow at a CAGR of 9.20%, aiming to hit $1.44 trillion
-              by 2034.
-            </p>
-          </div>
-
-          <a href="" class="text-blue-600">Read more <i class="fa-solid fa-arrow-right"></i></a>
         </div>
 
-        <div class="p-4">
-          <table class="min-w-full border border-gray-200 table-fixed">
-            <thead class="bg-gray-50">
-              <tr>
-                <th class="w-1/3 px-8 py-4 text-left text-lg font-medium text-gray-700 border-b">
-                  Career
-                </th>
-                <th class="w-1/3 px-8 py-4 text-left text-lg font-medium text-gray-700 border-b">
-                  Salary Range
-                </th>
-                <th class="w-1/3 px-8 py-4 text-left text-lg font-medium text-gray-700 border-b">
-                  Scope
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="w-1/3 px-6 py-4 text-sm text-gray-700 border-b">
-                  SEO Specialist
-                </td>
-                <td class="w-1/3 px-6 py-4 text-sm text-gray-700 border-b">
-                  $60,000 - $80,000
-                </td>
-                <td class="w-1/3 px-6 py-4 text-sm text-gray-700 border-b">
-                  Job offering Globally Over 150,000
-                </td>
-              </tr>
-              <tr>
-                <td class="w-1/3 px-4 py-2 text-sm text-gray-700 border-b">
-                  Raid ads Manage
-                </td>
-                <td class="w-1/3 px-4 py-2 text-sm text-gray-700 border-b">
-                  $60,000 - $127,000
-                </td>
-                <td class="w-1/3 px-4 py-2 text-sm text-gray-700 border-b">
-                  Job offering Globally Over 36,000 per year
-                </td>
-              </tr>
-              <tr>
-                <td class="w-1/3 px-4 py-2 text-sm text-gray-700">
-                  Content Marketer
-                </td>
-                <td class="w-1/3 px-4 py-2 text-sm text-gray-700">
-                  $77,858 - $111,891
-                </td>
-                <td class="w-1/3 px-4 py-2 text-sm text-gray-700">
-                  Job offering Over 17000+ alone in USA
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="mt-8 sm:mt-10 md:mt-12 lg:mt-16 space-y-8 sm:space-y-10 md:space-y-12 lg:space-y-16">
+
+            <!-- Career Section 1 -->
+            <div class="bg-white border border-gray-300 p-4 sm:p-6 md:p-8 rounded-lg topflow">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+                    <div class="p-4 sm:p-6 md:p-8">
+                        <div class="flex items-center gap-2 text-c-main">
+                            <i class="fa-solid fa-circle fa-xs"></i>
+                            <p class="font-inter font-medium text-sm sm:text-base md:text-[16px] leading-tight sm:leading-relaxed md:leading-[24px] tracking-[0.06em]">
+                                Digital Marketing
+                            </p>
+                        </div>
+
+                        <div class="my-4 sm:my-6 md:my-8">
+                            <h4 class="font-poppins font-normal text-t-first text-lg sm:text-xl md:text-2xl lg:text-[24px] leading-tight tracking-[-0.01em]">
+                                A $598 Billion Industry on the Rise
+                            </h4>
+                            <p class="font-roboto font-light text-t-second text-base sm:text-lg md:text-[18px] leading-relaxed sm:leading-loose md:leading-[28px] tracking-[0.02em] my-2">
+                                The global digital marketing industry was valued at
+                                approximately $598.58 billion in 2024 and is projected
+                                to grow at a CAGR of 9.20%, aiming to hit $1.44 trillion
+                                by 2034.
+                            </p>
+                        </div>
+
+                        <a href="#" class="text-blue-600 hover:text-blue-800 transition-colors duration-200 text-sm sm:text-base">Read more <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+
+                    <div class="p-2 sm:p-4 overflow-x-auto">
+                        <table class="min-w-full border border-gray-200 table-fixed text-xs sm:text-sm md:text-base">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-left font-medium text-gray-700 border-b whitespace-nowrap">
+                                        Career
+                                    </th>
+                                    <th class="px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-left font-medium text-gray-700 border-b whitespace-nowrap">
+                                        Salary Range
+                                    </th>
+                                    <th class="px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-left font-medium text-gray-700 border-b whitespace-nowrap">
+                                        Scope
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 text-gray-700 border-b whitespace-nowrap">
+                                        SEO Specialist
+                                    </td>
+                                    <td class="px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 text-gray-700 border-b whitespace-nowrap">
+                                        $60,000 - $80,000
+                                    </td>
+                                    <td class="px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 text-gray-700 border-b">
+                                        Job offering Globally Over 150,000
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 text-gray-700 border-b whitespace-nowrap">
+                                        Paid Ads Manager
+                                    </td>
+                                    <td class="px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 text-gray-700 border-b whitespace-nowrap">
+                                        $60,000 - $127,000
+                                    </td>
+                                    <td class="px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 text-gray-700 border-b">
+                                        Job offering Globally Over 36,000 per year
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 text-gray-700 whitespace-nowrap">
+                                        Content Marketer
+                                    </td>
+                                    <td class="px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 text-gray-700 whitespace-nowrap">
+                                        $77,858 - $111,891
+                                    </td>
+                                    <td class="px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 text-gray-700">
+                                        Job offering Over 17000+ alone in USA
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row items-center justify-start gap-4 sm:gap-8 p-4 sm:p-6 my-6 sm:my-8 bg-b-main rounded-lg overflow-x-auto">
+                    <div class="flex flex-col items-center shrink-0">
+                        <span class="text-lg sm:text-xl md:text-2xl font-bold text-gray-500">Top Companies</span>
+                    </div>
+
+                    <div class="h-8 sm:h-12 bg-gray-300 hidden sm:block w-px"></div>
+
+                    <div class="flex items-center gap-2 sm:gap-4 shrink-0">
+                        <i class="fa-brands fa-facebook text-blue-500 text-lg sm:fa-lg"></i>
+                        <strong class="font-medium text-sm sm:text-base">Facebook</strong>
+                    </div>
+
+                    <div class="flex items-center gap-2 sm:gap-4 shrink-0">
+                        <i class="fa-brands fa-google text-fuchsia-500 text-lg sm:fa-lg"></i>
+                        <strong class="font-medium text-sm sm:text-base">Google</strong>
+                    </div>
+
+                    <div class="flex items-center gap-2 sm:gap-4 shrink-0">
+                        <i class="fa-brands fa-instagram text-red-500 text-lg sm:fa-lg"></i>
+                        <strong class="font-medium text-sm sm:text-base">Instagram</strong>
+                    </div>
+
+                    <div class="flex items-center gap-2 sm:gap-4 shrink-0">
+                        <i class="fa-brands fa-microsoft text-blue-500 text-lg sm:fa-lg"></i>
+                        <strong class="font-medium text-sm sm:text-base">Microsoft</strong>
+                    </div>
+
+                    <div class="flex items-center gap-2 sm:gap-4 shrink-0">
+                        <i class="fa-brands fa-google-play text-green-500 text-lg sm:fa-lg"></i>
+                        <strong class="font-medium text-sm sm:text-base">Play Store</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Career Section 2 -->
+            <div class="bg-white border border-gray-300 p-4 sm:p-6 md:p-8 rounded-lg topflow">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+                    <div class="p-4 sm:p-6 md:p-8">
+                        <div class="flex items-center gap-2 text-c-main">
+                            <i class="fa-solid fa-circle fa-xs"></i>
+                            <p class="font-inter font-medium text-sm sm:text-base md:text-[16px] leading-tight sm:leading-relaxed md:leading-[24px] tracking-[0.06em]">
+                                Web Development
+                            </p>
+                        </div>
+
+                        <div class="my-4 sm:my-6 md:my-8">
+                            <h4 class="font-poppins font-normal text-t-first text-lg sm:text-xl md:text-2xl lg:text-[24px] leading-tight tracking-[-0.01em]">
+                                High Demand for Skilled Developers
+                            </h4>
+                            <p class="font-roboto font-light text-t-second text-base sm:text-lg md:text-[18px] leading-relaxed sm:leading-loose md:leading-[28px] tracking-[0.02em] my-2">
+                                Web development jobs are projected to grow 13% from 2020 to 2030, 
+                                faster than the average for all occupations. The increasing prevalence 
+                                of mobile devices and e-commerce drives demand for web developers.
+                            </p>
+                        </div>
+
+                        <a href="#" class="text-blue-600 hover:text-blue-800 transition-colors duration-200 text-sm sm:text-base">Read more <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+
+                    <div class="p-2 sm:p-4 overflow-x-auto">
+                        <table class="min-w-full border border-gray-200 table-fixed text-xs sm:text-sm md:text-base">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-left font-medium text-gray-700 border-b whitespace-nowrap">
+                                        Career
+                                    </th>
+                                    <th class="px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-left font-medium text-gray-700 border-b whitespace-nowrap">
+                                        Salary Range
+                                    </th>
+                                    <th class="px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-left font-medium text-gray-700 border-b whitespace-nowrap">
+                                        Scope
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 text-gray-700 border-b whitespace-nowrap">
+                                        Frontend Developer
+                                    </td>
+                                    <td class="px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 text-gray-700 border-b whitespace-nowrap">
+                                        $75,000 - $110,000
+                                    </td>
+                                    <td class="px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 text-gray-700 border-b">
+                                        Over 200,000 openings in the US
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 text-gray-700 border-b whitespace-nowrap">
+                                        Backend Developer
+                                    </td>
+                                    <td class="px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 text-gray-700 border-b whitespace-nowrap">
+                                        $85,000 - $130,000
+                                    </td>
+                                    <td class="px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 text-gray-700 border-b">
+                                        High demand across all industries
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 text-gray-700 whitespace-nowrap">
+                                        Full Stack Developer
+                                    </td>
+                                    <td class="px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 text-gray-700 whitespace-nowrap">
+                                        $90,000 - $140,000
+                                    </td>
+                                    <td class="px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 text-gray-700">
+                                        Most sought-after role in tech
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row items-center justify-start gap-4 sm:gap-8 p-4 sm:p-6 my-6 sm:my-8 bg-b-main rounded-lg overflow-x-auto">
+                    <div class="flex flex-col items-center shrink-0">
+                        <span class="text-lg sm:text-xl md:text-2xl font-bold text-gray-500">Top Companies</span>
+                    </div>
+
+                    <div class="h-8 sm:h-12 bg-gray-300 hidden sm:block w-px"></div>
+
+                    <div class="flex items-center gap-2 sm:gap-4 shrink-0">
+                        <i class="fa-brands fa-amazon text-yellow-500 text-lg sm:fa-lg"></i>
+                        <strong class="font-medium text-sm sm:text-base">Amazon</strong>
+                    </div>
+
+                    <div class="flex items-center gap-2 sm:gap-4 shrink-0">
+                        <i class="fa-brands fa-apple text-gray-700 text-lg sm:fa-lg"></i>
+                        <strong class="font-medium text-sm sm:text-base">Apple</strong>
+                    </div>
+
+                    <div class="flex items-center gap-2 sm:gap-4 shrink-0">
+                        <i class="fa-brands fa-netflix text-red-500 text-lg sm:fa-lg"></i>
+                        <strong class="font-medium text-sm sm:text-base">Netflix</strong>
+                    </div>
+
+                    <div class="flex items-center gap-2 sm:gap-4 shrink-0">
+                        <i class="fa-brands fa-spotify text-green-500 text-lg sm:fa-lg"></i>
+                        <strong class="font-medium text-sm sm:text-base">Spotify</strong>
+                    </div>
+
+                    <div class="flex items-center gap-2 sm:gap-4 shrink-0">
+                        <i class="fa-brands fa-slack text-purple-500 text-lg sm:fa-lg"></i>
+                        <strong class="font-medium text-sm sm:text-base">Slack</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Career Section 3 -->
+            <div class="bg-white border border-gray-300 p-4 sm:p-6 md:p-8 rounded-lg topflow">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+                    <div class="p-4 sm:p-6 md:p-8">
+                        <div class="flex items-center gap-2 text-c-main">
+                            <i class="fa-solid fa-circle fa-xs"></i>
+                            <p class="font-inter font-medium text-sm sm:text-base md:text-[16px] leading-tight sm:leading-relaxed md:leading-[24px] tracking-[0.06em]">
+                                Data Science
+                            </p>
+                        </div>
+
+                        <div class="my-4 sm:my-6 md:my-8">
+                            <h4 class="font-poppins font-normal text-t-first text-lg sm:text-xl md:text-2xl lg:text-[24px] leading-tight tracking-[-0.01em]">
+                                The Future is Data-Driven
+                            </h4>
+                            <p class="font-roboto font-light text-t-second text-base sm:text-lg md:text-[18px] leading-relaxed sm:leading-loose md:leading-[28px] tracking-[0.02em] my-2">
+                                The data science market is expected to grow from USD 95.3 billion in 2021 
+                                to USD 322.9 billion in 2026. Companies across all sectors are leveraging 
+                                data to drive decision-making and gain competitive advantages.
+                            </p>
+                        </div>
+
+                        <a href="#" class="text-blue-600 hover:text-blue-800 transition-colors duration-200 text-sm sm:text-base">Read more <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+
+                    <div class="p-2 sm:p-4 overflow-x-auto">
+                        <table class="min-w-full border border-gray-200 table-fixed text-xs sm:text-sm md:text-base">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-left font-medium text-gray-700 border-b whitespace-nowrap">
+                                        Career
+                                    </th>
+                                    <th class="px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-left font-medium text-gray-700 border-b whitespace-nowrap">
+                                        Salary Range
+                                    </th>
+                                    <th class="px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 text-left font-medium text-gray-700 border-b whitespace-nowrap">
+                                        Scope
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 text-gray-700 border-b whitespace-nowrap">
+                                        Data Analyst
+                                    </td>
+                                    <td class="px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 text-gray-700 border-b whitespace-nowrap">
+                                        $65,000 - $95,000
+                                    </td>
+                                    <td class="px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 text-gray-700 border-b">
+                                        High demand across industries
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 text-gray-700 border-b whitespace-nowrap">
+                                        Data Scientist
+                                    </td>
+                                    <td class="px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 text-gray-700 border-b whitespace-nowrap">
+                                        $95,000 - $150,000
+                                    </td>
+                                    <td class="px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 text-gray-700 border-b">
+                                        One of the fastest-growing fields
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 text-gray-700 whitespace-nowrap">
+                                        ML Engineer
+                                    </td>
+                                    <td class="px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 text-gray-700 whitespace-nowrap">
+                                        $110,000 - $170,000
+                                    </td>
+                                    <td class="px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 text-gray-700">
+                                        Critical for AI implementation
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row items-center justify-start gap-4 sm:gap-8 p-4 sm:p-6 my-6 sm:my-8 bg-b-main rounded-lg overflow-x-auto">
+                    <div class="flex flex-col items-center shrink-0">
+                        <span class="text-lg sm:text-xl md:text-2xl font-bold text-gray-500">Top Companies</span>
+                    </div>
+
+                    <div class="h-8 sm:h-12 bg-gray-300 hidden sm:block w-px"></div>
+
+                    <div class="flex items-center gap-2 sm:gap-4 shrink-0">
+                        <i class="fa-brands fa-ibm text-blue-700 text-lg sm:fa-lg"></i>
+                        <strong class="font-medium text-sm sm:text-base">IBM</strong>
+                    </div>
+
+                    <div class="flex items-center gap-2 sm:gap-4 shrink-0">
+                        <i class="fa-brands fa-nvidia text-green-500 text-lg sm:fa-lg"></i>
+                        <strong class="font-medium text-sm sm:text-base">NVIDIA</strong>
+                    </div>
+
+                    <div class="flex items-center gap-2 sm:gap-4 shrink-0">
+                        <i class="fa-brands fa-aws text-orange-500 text-lg sm:fa-lg"></i>
+                        <strong class="font-medium text-sm sm:text-base">AWS</strong>
+                    </div>
+
+                    <div class="flex items-center gap-2 sm:gap-4 shrink-0">
+                        <i class="fa-brands fa-salesforce text-blue-400 text-lg sm:fa-lg"></i>
+                        <strong class="font-medium text-sm sm:text-base">Salesforce</strong>
+                    </div>
+
+                    <div class="flex items-center gap-2 sm:gap-4 shrink-0">
+                        <i class="fa-brands fa-oracle text-red-500 text-lg sm:fa-lg"></i>
+                        <strong class="font-medium text-sm sm:text-base">Oracle</strong>
+                    </div>
+                </div>
+            </div>
+
         </div>
-      </div>
-
-      <div class="flex items-center justify-start flex-wrap gap-16 p-6 my-8 bg-b-main rounded-lg">
-        <!-- Each company item -->
-        <div class="flex flex-col items-center">
-          <span class="text-2xl font-bold text-gray-500 mb-1">Top Companies</span>
-        </div>
-
-        <div class="h-[60px] bg-gray-300">.</div>
-
-        <div class="flex items-center gap-4">
-          <i class="fa-brands fa-facebook text-blue-500 fa-lg"></i>
-          <strong class="font-medium">Facebook</strong>
-        </div>
-
-        <div class="flex items-center gap-4">
-          <i class="fa-brands fa-google text-fuchsia-500 fa-lg"></i>
-          <strong class="font-medium">Google</strong>
-        </div>
-
-        <div class="flex items-center gap-4">
-          <i class="fa-brands fa-instagram text-red-500 fa-lg"></i>
-          <strong class="font-medium">Instagran</strong>
-        </div>
-
-        <div class="flex items-center gap-4">
-          <i class="fa-brands fa-microsoft text-blue-500 fa-lg"></i>
-          <strong class="font-medium">Microsift</strong>
-        </div>
-
-        <div class="flex items-center gap-4">
-          <i class="fa-brands fa-google-play text-green-500 fa-lg"></i>
-          <strong class="font-medium">Pay Store</strong>
-        </div>
-      </div>
-    </div>
-
-    <div class="bg-white border border-gray-300 p-8 mt-12 rounded-lg topflow">
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
-        <div class="p-8">
-          <div class="flex items-center gap-2 text-c-main">
-            <i class="fa-solid fa-circle fa-xs"></i>
-            <p class="font-inter font-medium text-[16px] leading-[24px] tracking-[0.06em]">
-              Digital Marketing
-            </p>
-          </div>
-
-          <div class="my-8">
-            <h4 class="font-poppins font-normal text-t-first text-[24px] leading-[100%] tracking-[-0.01em]">
-              A $598 Billion Industry on the Rise
-            </h4>
-            <p class="font-roboto font-light text-t-second text-[18px] leading-[28px] tracking-[0.02em] my-2">
-              The global digital marketing industry was valued at
-              approximately $598.58 billion in 2024 and is projected
-              to grow at a CAGR of 9.20%, aiming to hit $1.44 trillion
-              by 2034.
-            </p>
-          </div>
-
-          <a href="" class="text-blue-600">Read more <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-
-        <div class="p-4">
-          <table class="min-w-full border border-gray-200 table-fixed">
-            <thead class="bg-gray-50">
-              <tr>
-                <th class="w-1/3 px-8 py-4 text-left text-lg font-medium text-gray-700 border-b">
-                  Career
-                </th>
-                <th class="w-1/3 px-8 py-4 text-left text-lg font-medium text-gray-700 border-b">
-                  Salary Range
-                </th>
-                <th class="w-1/3 px-8 py-4 text-left text-lg font-medium text-gray-700 border-b">
-                  Scope
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="w-1/3 px-6 py-4 text-sm text-gray-700 border-b">
-                  SEO Specialist
-                </td>
-                <td class="w-1/3 px-6 py-4 text-sm text-gray-700 border-b">
-                  $60,000 - $80,000
-                </td>
-                <td class="w-1/3 px-6 py-4 text-sm text-gray-700 border-b">
-                  Job offering Globally Over 150,000
-                </td>
-              </tr>
-              <tr>
-                <td class="w-1/3 px-4 py-2 text-sm text-gray-700 border-b">
-                  Raid ads Manage
-                </td>
-                <td class="w-1/3 px-4 py-2 text-sm text-gray-700 border-b">
-                  $60,000 - $127,000
-                </td>
-                <td class="w-1/3 px-4 py-2 text-sm text-gray-700 border-b">
-                  Job offering Globally Over 36,000 per year
-                </td>
-              </tr>
-              <tr>
-                <td class="w-1/3 px-4 py-2 text-sm text-gray-700">
-                  Content Marketer
-                </td>
-                <td class="w-1/3 px-4 py-2 text-sm text-gray-700">
-                  $77,858 - $111,891
-                </td>
-                <td class="w-1/3 px-4 py-2 text-sm text-gray-700">
-                  Job offering Over 17000+ alone in USA
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <div class="flex items-center justify-start flex-wrap gap-16 p-6 my-8 bg-b-main rounded-lg">
-        <!-- Each company item -->
-        <div class="flex flex-col items-center">
-          <span class="text-2xl font-bold text-gray-500 mb-1">Top Companies</span>
-        </div>
-
-        <div class="h-[60px] bg-gray-300">.</div>
-
-        <div class="flex items-center gap-4">
-          <i class="fa-brands fa-facebook text-blue-500 fa-lg"></i>
-          <strong class="font-medium">Facebook</strong>
-        </div>
-
-        <div class="flex items-center gap-4">
-          <i class="fa-brands fa-google text-fuchsia-500 fa-lg"></i>
-          <strong class="font-medium">Google</strong>
-        </div>
-
-        <div class="flex items-center gap-4">
-          <i class="fa-brands fa-instagram text-red-500 fa-lg"></i>
-          <strong class="font-medium">Instagran</strong>
-        </div>
-
-        <div class="flex items-center gap-4">
-          <i class="fa-brands fa-microsoft text-blue-500 fa-lg"></i>
-          <strong class="font-medium">Microsift</strong>
-        </div>
-
-        <div class="flex items-center gap-4">
-          <i class="fa-brands fa-google-play text-green-500 fa-lg"></i>
-          <strong class="font-medium">Pay Store</strong>
-        </div>
-      </div>
-    </div>
-
-    <div class="bg-white border border-gray-300 p-8 mt-12 rounded-lg topflow">
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
-        <div class="p-8">
-          <div class="flex items-center gap-2 text-c-main">
-            <i class="fa-solid fa-circle fa-xs"></i>
-            <p class="font-inter font-medium text-[16px] leading-[24px] tracking-[0.06em]">
-              Digital Marketing
-            </p>
-          </div>
-
-          <div class="my-8">
-            <h4 class="font-poppins font-normal text-t-first text-[24px] leading-[100%] tracking-[-0.01em]">
-              A $598 Billion Industry on the Rise
-            </h4>
-            <p class="font-roboto font-light text-t-second text-[18px] leading-[28px] tracking-[0.02em] my-2">
-              The global digital marketing industry was valued at
-              approximately $598.58 billion in 2024 and is projected
-              to grow at a CAGR of 9.20%, aiming to hit $1.44 trillion
-              by 2034.
-            </p>
-          </div>
-
-          <a href="" class="text-blue-600">Read more <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-
-        <div class="p-4">
-          <table class="min-w-full border border-gray-200 table-fixed">
-            <thead class="bg-gray-50">
-              <tr>
-                <th class="w-1/3 px-8 py-4 text-left text-lg font-medium text-gray-700 border-b">
-                  Career
-                </th>
-                <th class="w-1/3 px-8 py-4 text-left text-lg font-medium text-gray-700 border-b">
-                  Salary Range
-                </th>
-                <th class="w-1/3 px-8 py-4 text-left text-lg font-medium text-gray-700 border-b">
-                  Scope
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="w-1/3 px-6 py-4 text-sm text-gray-700 border-b">
-                  SEO Specialist
-                </td>
-                <td class="w-1/3 px-6 py-4 text-sm text-gray-700 border-b">
-                  $60,000 - $80,000
-                </td>
-                <td class="w-1/3 px-6 py-4 text-sm text-gray-700 border-b">
-                  Job offering Globally Over 150,000
-                </td>
-              </tr>
-              <tr>
-                <td class="w-1/3 px-4 py-2 text-sm text-gray-700 border-b">
-                  Raid ads Manage
-                </td>
-                <td class="w-1/3 px-4 py-2 text-sm text-gray-700 border-b">
-                  $60,000 - $127,000
-                </td>
-                <td class="w-1/3 px-4 py-2 text-sm text-gray-700 border-b">
-                  Job offering Globally Over 36,000 per year
-                </td>
-              </tr>
-              <tr>
-                <td class="w-1/3 px-4 py-2 text-sm text-gray-700">
-                  Content Marketer
-                </td>
-                <td class="w-1/3 px-4 py-2 text-sm text-gray-700">
-                  $77,858 - $111,891
-                </td>
-                <td class="w-1/3 px-4 py-2 text-sm text-gray-700">
-                  Job offering Over 17000+ alone in USA
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <div class="flex items-center justify-start flex-wrap gap-16 p-6 my-8 bg-b-main rounded-lg">
-        <!-- Each company item -->
-        <div class="flex flex-col items-center">
-          <span class="text-2xl font-bold text-gray-500 mb-1">Top Companies</span>
-        </div>
-
-        <div class="h-[60px] bg-gray-300">.</div>
-
-        <div class="flex items-center gap-4">
-          <i class="fa-brands fa-facebook text-blue-500 fa-lg"></i>
-          <strong class="font-medium">Facebook</strong>
-        </div>
-
-        <div class="flex items-center gap-4">
-          <i class="fa-brands fa-google text-fuchsia-500 fa-lg"></i>
-          <strong class="font-medium">Google</strong>
-        </div>
-
-        <div class="flex items-center gap-4">
-          <i class="fa-brands fa-instagram text-red-500 fa-lg"></i>
-          <strong class="font-medium">Instagran</strong>
-        </div>
-
-        <div class="flex items-center gap-4">
-          <i class="fa-brands fa-microsoft text-blue-500 fa-lg"></i>
-          <strong class="font-medium">Microsift</strong>
-        </div>
-
-        <div class="flex items-center gap-4">
-          <i class="fa-brands fa-google-play text-green-500 fa-lg"></i>
-          <strong class="font-medium">Pay Store</strong>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
+    </section>
 
 
 
@@ -916,35 +908,34 @@ body {
   <!-- Background overlay with lower opacity and proper z-index -->
   <div class="absolute inset-0 z-0 bg-gray-100/10"></div>
 
-  <div class="container mx-auto px-4 md:px-0 py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 2xl:py-24 z-10">
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center relative">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 2xl:py-24 z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-center relative">
       <!-- Left Column -->
-
-      <div class="bg-c-main ml-8 h-[550px] w-[calc(100%-15px)] lg:col-span-1 overflow-hidden">
-        <div class="absolute left-[-20px] h-[550px] w-[560px] py-10">
-          <img src="{{ asset('assets/rohit.png') }}" alt="Decorative element" class="h-full w-full object-contain" />
+      <div class="bg-c-main lg:ml-0 mx-auto lg:mx-0 h-[300px] sm:h-[400px] md:h-[500px] lg:h-[550px] w-full max-w-full lg:w-[calc(100%-15px)] lg:col-span-1 overflow-hidden">
+        <div class="absolute left-0 lg:left-[60px] h-[300px] sm:h-[400px] md:h-[500px] lg:h-[550px] w-full max-w-full lg:w-[560px] py-4 sm:py-6 lg:py-10 flex justify-center lg:justify-start">
+          <img src="{{ asset('assets/rohit.png') }}" alt="Decorative element" class="h-full w-auto object-contain" />
         </div>
       </div>
 
       <!-- Right Column -->
       <div class="lg:col-span-2">
-        <div class="ml-32">
-          <h2 class="font-poppins font-medium text-[36px] leading-[48px] tracking-[-0.02em] text-t-first mb-4">
+        <div class="lg:ml-32 mx-4 lg:mx-0">
+          <h2 class="font-poppins font-medium text-2xl sm:text-3xl md:text-4xl lg:text-[36px] leading-tight sm:leading-snug md:leading-[48px] tracking-[-0.02em] text-t-first mb-4 sm:mb-6">
             Created by Someone Who's Been in Your Shoes
           </h2>
-          <p class="font-roboto font-light text-[20px] leading-[30px] tracking-[0.02em] text-t-first mb-6">
+          <p class="font-roboto font-light text-base sm:text-lg md:text-[20px] leading-relaxed sm:leading-loose md:leading-[30px] tracking-[0.02em] text-t-first mb-6 sm:mb-8">
             CareerIntoIT is
             <span class="font-normal bg-[#e1c6bd]">founded by Rohit Rajput</span>, a digital marketing strategist with
             real-world
             experience in SEO, content, and growth campaigns.
-            <br /><br />
+            <br class="hidden sm:block" /><br class="hidden sm:block" />
             Having worked with businesses across industries and
             mentored newcomers into tech, Rohit built this platform
             to make your career journey easier, clearer, and more
             focused — no matter where you're starting.
           </p>
           <button
-            class="bg-c-main hover:bg-[#f85a2a] text-white font-semibold w-[233px] h-[56px] px-8 py-[14px] rounded-[16px] gap-2 relative z-20 transition-colors duration-300">
+            class="bg-c-main hover:bg-[#f85a2a] text-white font-semibold w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-[14px] h-12 sm:h-[56px] rounded-2xl gap-2 relative z-20 transition-colors duration-300">
             Meet Rohit Rajput
           </button>
         </div>
@@ -958,44 +949,43 @@ body {
 
 
 <!-- testimonials section -->
-<section class="bg-[#fff4f0] py-24 autoflow">
-  <div class="container mx-auto flex flex-col">
+<section class="bg-[#fff4f0] py-12 sm:py-16 md:py-20 lg:py-24 autoflow">
+  <div class="container mx-auto flex flex-col px-4 sm:px-6 lg:px-8">
     <!-- Main slider grid -->
-
-    <div
-      class="flex flex-col gap-4 sm:gap-6 lg:flex-row lg:justify-between lg:gap-12 pb-8 md:pb-10 lg:pb-16 xl:pb-20 2xl:pb-24">
-      <h2 class="font-poppins font-medium text-[36px] leading-[48px] tracking-[-0.02em]">
+    <div class="flex flex-col gap-4 sm:gap-6 lg:flex-row lg:justify-between lg:gap-8 xl:gap-12 pb-6 sm:pb-8 md:pb-10 lg:pb-16 xl:pb-20 2xl:pb-24">
+      <h2 class="font-poppins font-medium text-2xl sm:text-3xl md:text-4xl lg:text-[36px] leading-tight sm:leading-snug md:leading-[48px] tracking-[-0.02em]">
         What Our Learners Say
       </h2>
-      <p
-        class="font-roboto font-light text-[20px] leading-[30px] tracking-[0.02em] text-gray-600 max-w-prose lg:w-[50%]">
-        When you’re starting something new, it helps to hear from people who’ve been where you are. These are real
+      <p class="font-roboto font-light text-base sm:text-lg md:text-[20px] leading-relaxed sm:leading-loose md:leading-[30px] tracking-[0.02em] text-gray-600 max-w-full lg:max-w-prose lg:w-[50%]">
+        When you're starting something new, it helps to hear from people who've been where you are. These are real
         stories from learners and career-changers who took the first step — just like you're about to.
       </p>
     </div>
 
-    <div class="flex w-full p-4 gap-6 rounded-lg">
+    <div class="flex flex-col lg:flex-row w-full p-3 sm:p-4 gap-4 sm:gap-6 rounded-lg">
       <!-- Left Main Testimonial -->
-      <div id="main" class="flex items-center gap-4 w-[70%] transition-all duration-700">
+      <div id="main" class="flex flex-col sm:flex-row items-center sm:items-start gap-3 sm:gap-4 w-full lg:w-[70%] transition-all duration-700">
         <img id="main-img" src="https://randomuser.me/api/portraits/men/32.jpg"
-          class="h-40 w-40 rounded-md object-cover bg-purple-300 shadow-lg transition-all duration-700" />
-        <div>
-          <p id="main-text" class="text-gray-700 font-medium text-lg"></p>
-          <span id="main-name" class="block text-gray-500 italic text-sm mt-3"></span>
+          class="h-24 w-24 sm:h-32 sm:w-32 md:h-40 md:w-40 rounded-md object-cover bg-purple-300 shadow-lg transition-all duration-700" />
+        <div class="text-center sm:text-left">
+          <p id="main-text" class="text-gray-700 font-medium text-sm sm:text-base md:text-lg"></p>
+          <span id="main-name" class="block text-gray-500 italic text-xs sm:text-sm mt-2 sm:mt-3"></span>
         </div>
       </div>
+      
       <!-- Right Side Queue -->
-      <div class="flex flex-col justify-between w-[30%]">
-        <div id="queue" class="flex justify-end gap-4 mb-4 transition-all duration-700"></div>
+      <div class="flex flex-col justify-between w-full lg:w-[30%] mt-4 lg:mt-0">
+        <div id="queue" class="flex lg:flex-row lg:justify-end gap-3 sm:gap-4 transition-all duration-700"></div>
       </div>
     </div>
+    
     <!-- Controls below grid, aligned right -->
-    <div class="flex w-full justify-end pt-3">
+    <div class="flex w-full justify-center lg:justify-end pt-4 sm:pt-3">
       <div class="flex gap-3">
         <button onclick="prevTestimonial()"
-          class="border border-orange-300 rounded-full p-2 flex items-center hover:bg-orange-100 transition"><span>&#8592;</span></button>
+          class="border border-orange-300 rounded-full p-2 sm:p-2 flex items-center hover:bg-orange-100 transition text-lg sm:text-base"><span>&#8592;</span></button>
         <button onclick="nextTestimonial()"
-          class="border border-orange-300 rounded-full p-2 flex items-center hover:bg-orange-100 transition"><span>&#8594;</span></button>
+          class="border border-orange-300 rounded-full p-2 sm:p-2 flex items-center hover:bg-orange-100 transition text-lg sm:text-base"><span>&#8594;</span></button>
       </div>
     </div>
   </div>
@@ -1058,8 +1048,8 @@ function updateQueueAnimated(next) {
   let q2 = (next + 2) % testimonials.length;
   const queueDiv = document.getElementById('queue');
   queueDiv.innerHTML = `
-    <img id="queue1" src="${testimonials[q1].img}" class="h-40 w-40 rounded-md object-cover grayscale bg-gray-200 shadow opacity-0" />
-    <img id="queue2" src="${testimonials[q2].img}" class="h-40 w-40 rounded-md object-cover grayscale bg-gray-200 shadow opacity-0" />
+    <img id="queue1" src="${testimonials[q1].img}" class="h-[45%] w-[45%] lg:h-40 lg:w-40 rounded-md object-cover grayscale bg-gray-200 shadow opacity-0" />
+    <img id="queue2" src="${testimonials[q2].img}" class="h-[45%] w-[45%] lg:h-40 lg:w-40 rounded-md object-cover grayscale bg-gray-200 shadow opacity-0" />
   `;
   // Animate both right side images with fade/slide from right to left
   setTimeout(() => {

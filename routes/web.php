@@ -14,12 +14,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::controller(FrontController::class)->group(function () {
-  Route::get('/', 'index')->name('home');
-  Route::get('/services', 'services')->name('services');
-  Route::get('/pages', 'pages')->name('pages');
-  Route::get('/roadmap', 'roadmap')->name('roadmap');
-  Route::get('/meetrohit', 'meetrohit')->name('meetrohit');
-  Route::get('/about', 'aboutpage')->name('about');
-  Route::get('/contact', 'contact')->name('contact');
+Route::get('/', [FrontController::class, 'index'])->name('home');
+
+Route::prefix('/')->group(function() {
+  Route::get('services', [FrontController::class, 'services'])->name('services');
+  Route::get('pages', [FrontController::class, 'pages'])->name('pages');
+  Route::get('roadmap', [FrontController::class, 'roadmap'])->name('roadmap');
+  Route::get('meetrohit', [FrontController::class, 'meetrohit'])->name('meetrohit');
+  Route::get('about', [FrontController::class, 'aboutpage'])->name('about');
+  Route::get('contact', [FrontController::class, 'contact'])->name('contact');
+  Route::get('blog', [FrontController::class, 'blog'])->name('blog');
+  Route::get('category', [FrontController::class, 'category'])->name('category');
+  Route::get('search', [FrontController::class, 'search'])->name('search');
+  Route::get('singlepost', [FrontController::class, 'singlepost'])->name('singlepost');
+});
+
+Route::prefix('/')->group(function() {
+  Route::get('login', [FrontController::class, 'login'])->name('login');
 });
