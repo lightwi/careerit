@@ -18,6 +18,18 @@
   animation-timeline: view();
   animation-range: entry 10% cover 100vh;
 }
+
+@keyframes text-appear {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
   </style>
   @stack('styles')
 
@@ -127,7 +139,7 @@
         </div>
         <!-- END Mega Menu Wrapper -->
 
-        <a href="#" class="text-t-second hover:text-c-main text-[16px] font-normal transition">Blog</a>
+        <a href="{{ route('blog') }}" class="text-t-second hover:text-c-main text-[16px] font-normal transition">Blog</a>
         <a href="{{ route('about') }}" class="text-t-second hover:text-c-main text-[16px] font-normal transition">About</a>
         <a href="{{ route('contact') }}" class="text-t-second hover:text-c-main text-[16px] font-normal transition">Contact</a>
       </div>
@@ -164,7 +176,7 @@
           <h4 class="text-md font-bold text-c-main">Digital Marketing</h4>
 
           <div class="flex flex-col ml-4 gap-6 my-4">
-            <a href="" class="text-t-second hover:text-c-main text-[16px] font-normal transition">Digital Marketing</a>
+            <a href="{{ route('services') }}" class="text-t-second hover:text-c-main text-[16px] font-normal transition">Digital Marketing</a>
             <a href="" class="text-t-second hover:text-c-main text-[16px] font-normal transition">SEO</a>
             <a href="" class="text-t-second hover:text-c-main text-[16px] font-normal transition">SMM</a>
             <a href="" class="text-t-second hover:text-c-main text-[16px] font-normal transition">PPC</a>
@@ -187,7 +199,7 @@
         </div>
         </div>
 
-        <a href="#" class="text-t-second hover:text-c-main text-[16px] font-normal transition">Blog</a>
+        <a href="{{ route('blog') }}" class="text-t-second hover:text-c-main text-[16px] font-normal transition">Blog</a>
         <a href="{{ route('about') }}" class="text-t-second hover:text-c-main text-[16px] font-normal transition">About</a>
         <a href="{{ route('contact') }}" class="text-t-second hover:text-c-main text-[16px] font-normal transition">Contact</a>
 

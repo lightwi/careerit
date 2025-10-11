@@ -949,7 +949,7 @@ body {
 
 
 <!-- testimonials section -->
-<section class="bg-[#fff4f0] py-12 sm:py-16 md:py-20 lg:py-24 autoflow">
+<section class="bg-[#fff4f0] py-12 sm:py-16 md:py-20 lg:py-24 autoflow overflow-x-hidden">
   <div class="container mx-auto flex flex-col px-4 sm:px-6 lg:px-8">
     <!-- Main slider grid -->
     <div class="flex flex-col gap-4 sm:gap-6 lg:flex-row lg:justify-between lg:gap-8 xl:gap-12 pb-6 sm:pb-8 md:pb-10 lg:pb-16 xl:pb-20 2xl:pb-24">

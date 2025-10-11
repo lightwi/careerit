@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\AppController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,5 +32,13 @@ Route::prefix('/')->group(function() {
 });
 
 Route::prefix('/')->group(function() {
-  Route::get('login', [FrontController::class, 'login'])->name('login');
+  Route::get('login', [AuthController::class, 'index'])->name('login');
+  Route::get('signup', [AuthController::class, 'signup'])->name('signup');
+  Route::get('forget-password', [AuthController::class, 'forgetpass'])->name('forgetpass');
+  Route::get('otp-verify', [AuthController::class, 'otpverify'])->name('otpverify');
+  Route::get('change-password', [AuthController::class, 'changepass'])->name('changepass');
+});
+
+Route::prefix('/admin/')->group(function() {
+  Route::get('dashboard', [AppController::class, 'index'])->name('dashboard');
 });

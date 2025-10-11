@@ -7,32 +7,12 @@ Services
 
 @push('styles')
 
-<style>
-.autoflow {
-  animation: text-appear both;
-  animation-timeline: view();
-  animation-range: entry 10% cover 100vh;
-}
-
-@keyframes text-appear {
-  from {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-</style>
-
 @endpush
 
 
 @section('content')
 
-<section class="container mx-auto py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 2xl:py-24">
+<section class="container mx-auto px-4 md:px-0 py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 2xl:py-24">
 
   <div class="flex flex-col gap-4 sm:gap-6 lg:flex-row lg:justify-between lg:items-center lg:gap-12">
     <h2 class="font-poppins font-medium text-t-first text-[36px] leading-[48px] tracking-[-0.02em] lg:w-[40%]">
@@ -54,95 +34,91 @@ Services
 
 
   <div class="w-[90%] mx-auto">
-    <div class="grid grid-cols-3 gap-4">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
 
-      <div class="mt-8">
-        <p class="font-roboto text-c-main font-medium text-[18px] leading-none tracking-[0.02em] mb-8">
-          I kept asking myself
+    <div class="mt-8">
+      <p class="font-roboto text-c-main font-medium text-[16px] md:text-[18px] leading-none tracking-[0.02em] mb-8">
+        I kept asking myself
+      </p>
+
+      <div class="flex justify-start items-center gap-4">
+        <div class="p-1 bg-c-main rounded-full">
+        </div>
+        <p class="font-roboto text-t-first font-light text-[14px] md:text-[16px] leading-none tracking-[0.02em]">
+          What if I choose the wrong path?
         </p>
-
-        <div class="flex justify-start items-center gap-4">
-          <div class="p-1 bg-c-main rounded-full">
-          </div>
-          <p class="font-roboto text-t-first font-light text-[16px] leading-none tracking-[0.02em]">
-            What if I choose the wrong path?
-          </p>
-        </div>
-
-        <div class="w-[2px] h-[28px] my-2 ml-[3px] bg-c-main"></div>
-
-        <div class="flex justify-start items-center gap-4">
-          <div class="p-1 bg-c-main rounded-full">
-          </div>
-          <p class="font-roboto text-t-first font-light text-[16px] leading-none tracking-[0.02em]">
-            What if I’m not good enough?
-          </p>
-        </div>
-
-        <div class="w-[2px] h-[28px] my-2 ml-[3px] bg-c-main"></div>
-
-        <div class="flex justify-start items-center gap-4">
-          <div class="p-1 bg-c-main rounded-full">
-          </div>
-          <p class="font-roboto text-t-first font-light text-[16px] leading-none tracking-[0.02em]">
-            What if it’s too late for me?
-          </p>
-        </div>
-
       </div>
 
-      <div class="relative">
+      <div class="w-[2px] h-[28px] my-2 ml-[3px] bg-c-main"></div>
 
-        <div class="w-[1px] ml-28 h-[250px] bg-gradient-to-t from-c-main from-50% to-gray-600 to-50% rotate-[16deg]">
+      <div class="flex justify-start items-center gap-4">
+        <div class="p-1 bg-c-main rounded-full">
         </div>
-
-        <p class="absolute top-4 left-12 font-poppins text-lg font-light">Myself</p>
-
-        <div class="absolute top-20 left-20 left-0 w-[75px] h-[75px] rounded-full bg-white shadow-md">
-          <p class="font-normal text-[32px] text-c-main text-center mt-[19px]">VS</p>
-        </div>
-
-        <p class="absolute bottom-4 left-28 font-poppins text-lg font-light">Someone</p>
-
-      </div>
-
-      <div class="mt-8">
-        <p class="font-roboto text-c-main font-medium text-[18px] leading-none tracking-[0.02em] mb-8">
-           what I wish someone told me
+        <p class="font-roboto text-t-first font-light text-[14px] md:text-[16px] leading-none tracking-[0.02em]">
+          What if I'm not good enough?
         </p>
-
-        <div class="flex justify-start items-center gap-4">
-          <div class="p-1 bg-c-main rounded-full">
-          </div>
-          <p class="font-roboto text-t-first font-light text-[16px] leading-none tracking-[0.02em]">
-            It’s okay to not know right away.
-          </p>
-        </div>
-
-        <div class="w-[2px] h-[28px] my-2 ml-[3px] bg-c-main"></div>
-
-        <div class="flex justify-start items-center gap-4">
-          <div class="p-1 bg-c-main rounded-full">
-          </div>
-          <p class="font-roboto text-t-first font-light text-[16px] leading-none tracking-[0.02em]">
-            You can start small and build.
-          </p>
-        </div>
-
-        <div class="w-[2px] h-[28px] my-2 ml-[3px] bg-c-main"></div>
-
-        <div class="flex justify-start items-center gap-4">
-          <div class="p-1 bg-c-main rounded-full">
-          </div>
-          <p class="font-roboto text-t-first font-light text-[16px] leading-none tracking-[0.02em]">
-            Every step forward gives you clarity.
-          </p>
-        </div>
-
       </div>
 
+      <div class="w-[2px] h-[28px] my-2 ml-[3px] bg-c-main"></div>
+
+      <div class="flex justify-start items-center gap-4">
+        <div class="p-1 bg-c-main rounded-full">
+        </div>
+        <p class="font-roboto text-t-first font-light text-[14px] md:text-[16px] leading-none tracking-[0.02em]">
+          What if it's too late for me?
+        </p>
+      </div>
     </div>
+
+    <div class="relative py-8 md:py-0">
+      <div class="w-[1px] mx-auto md:ml-28 h-[150px] md:h-[250px] bg-gradient-to-t from-c-main from-50% to-gray-600 to-50% rotate-0 md:rotate-[16deg]">
+      </div>
+
+      <p class="absolute top-0 left-1/2 transform -translate-x-1/2 md:top-4 md:left-12 md:transform-none font-poppins text-base md:text-lg font-light">Myself</p>
+
+      <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:top-20 md:left-20 md:left-0 md:transform-none w-[60px] h-[60px] md:w-[75px] md:h-[75px] rounded-full bg-white shadow-md">
+        <p class="font-normal text-[24px] md:text-[32px] text-c-main text-center mt-[14px] md:mt-[19px]">VS</p>
+      </div>
+
+      <p class="absolute bottom-0 left-1/2 transform -translate-x-1/2 md:bottom-4 md:left-28 md:transform-none font-poppins text-base md:text-lg font-light">Someone</p>
+    </div>
+
+    <div class="mt-8">
+      <p class="font-roboto text-c-main font-medium text-[16px] md:text-[18px] leading-none tracking-[0.02em] mb-8">
+        what I wish someone told me
+      </p>
+
+      <div class="flex justify-start items-center gap-4">
+        <div class="p-1 bg-c-main rounded-full">
+        </div>
+        <p class="font-roboto text-t-first font-light text-[14px] md:text-[16px] leading-none tracking-[0.02em]">
+          It's okay to not know right away.
+        </p>
+      </div>
+
+      <div class="w-[2px] h-[28px] my-2 ml-[3px] bg-c-main"></div>
+
+      <div class="flex justify-start items-center gap-4">
+        <div class="p-1 bg-c-main rounded-full">
+        </div>
+        <p class="font-roboto text-t-first font-light text-[14px] md:text-[16px] leading-none tracking-[0.02em]">
+          You can start small and build.
+        </p>
+      </div>
+
+      <div class="w-[2px] h-[28px] my-2 ml-[3px] bg-c-main"></div>
+
+      <div class="flex justify-start items-center gap-4">
+        <div class="p-1 bg-c-main rounded-full">
+        </div>
+        <p class="font-roboto text-t-first font-light text-[14px] md:text-[16px] leading-none tracking-[0.02em]">
+          Every step forward gives you clarity.
+        </p>
+      </div>
+    </div>
+
   </div>
+</div>
 
 </section>
 
@@ -168,7 +144,7 @@ Services
         Get Roadmap
       </button>
 
-      <img src="{{ asset('assets/graphics/arrow.png') }}" class="absolute -bottom-[90px] right-[20px]" alt="" srcset="">
+      <img src="{{ asset('assets/graphics/arrow.png') }}" class="hidden md:absolute -bottom-[90px] right-[20px]" alt="" srcset="">
 
     </div>
   </div>
@@ -176,7 +152,7 @@ Services
 
 
 
-<section class="container mx-auto py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 2xl:py-24 autoflow">
+<section class="container mx-auto px-4 md:px-0 py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 2xl:py-24 autoflow">
 
   <div class="flex flex-col gap-4 sm:gap-6 lg:flex-row lg:justify-between lg:items-center lg:gap-12">
     <h2 class="font-poppins font-medium text-t-first text-[36px] leading-[48px] tracking-[-0.02em] lg:w-[40%]">
@@ -200,7 +176,7 @@ Services
   </div>
 
 
-  <div class="grid grid-cols-3 gap-4">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
 
     <div class="border border-gray-300 rounded-lg hover:shadow-lg hover:shadow-c-main/40 hover:bg-white p-8">
       <p class="font-roboto font-medium text-sm text-c-main">Digital Marketing</p>
@@ -419,7 +395,7 @@ Services
   </div>
 
 
-  <div class="grid grid-cols-3 gap-4">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
 
     <div class="border border-gray-300 rounded-lg hover:shadow-lg hover:shadow-c-main/40 hover:bg-white p-8">
       <p class="font-roboto font-medium text-sm text-c-main">Digital Marketing</p>
@@ -632,8 +608,8 @@ Services
 <section class="bg-white">
 
   <!-- Wrapper -->
-  <div class="container mx-auto py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 2xl:py-24 autoflow">
-    <div class="bg-white w-full rounded-md flex gap-12">
+  <div class="container mx-auto px-4 md:px-auto py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 2xl:py-24 autoflow">
+    <div class="bg-white w-full rounded-md flex flex-col md:flex-row gap-12">
       <!-- LEFT SIDE: Text and List -->
       <div class="flex-1 mt-6">
         <h1 class="font-poppins text-[38px] font-medium text-t-first mb-3">
@@ -678,27 +654,27 @@ Services
         </p>
       </div>
       <!-- RIGHT SIDE: Image Collage -->
-      <div class="flex-1 flex flex-col justify-center items-center">
+      <div class="hidden md:inline flex-1 flex flex-col justify-center items-center">
         <!-- Top row: Tall images -->
-        <div class="flex gap-4 mb-4">
+        <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 mb-2 sm:mb-4">
           <img
             src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=300&h=400&q=80"
-            alt="Demo" class="w-40 h-40 mt-20 object-cover rounded" />
+            alt="Demo" class="w-32 h-32 sm:w-40 sm:h-40 mt-10 sm:mt-20 object-cover rounded" />
           <img
             src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=facearea&w=300&h=400&q=80"
-            alt="Demo" class="w-40 h-60 object-cover rounded" />
+            alt="Demo" class="w-32 h-40 sm:w-40 sm:h-60 object-cover rounded" />
         </div>
         <!-- Bottom row: Three smaller images -->
-        <div class="flex gap-4">
+        <div class="flex flex-col sm:flex-row gap-2 sm:gap-4">
           <img
             src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=facearea&w=180&h=120&q=80"
-            alt="Demo" class="w-48 h-32 object-cover rounded" />
+            alt="Demo" class="w-40 h-24 sm:w-48 sm:h-32 object-cover rounded" />
           <img
             src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=facearea&w=180&h=120&q=80"
-            alt="Demo" class="w-40 h-60 object-cover rounded" />
+            alt="Demo" class="w-32 h-40 sm:w-40 sm:h-60 object-cover rounded" />
           <img
             src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=facearea&w=180&h=120&q=80"
-            alt="Demo" class="w-48 h-32 object-cover rounded" />
+            alt="Demo" class="w-40 h-24 sm:w-48 sm:h-32 object-cover rounded" />
         </div>
       </div>
     </div>
@@ -709,11 +685,11 @@ Services
 
 
 
-<section class="bg-black py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 2xl:py-24 autoflow">
+<section class="bg-black px-4 md:px-0 py-8 sm:py-10 md:py-12 lg:py-16 xl:py-20 2xl:py-24 autoflow">
 
   <div class="container w-full mx-auto">
     <!-- Header row -->
-    <div class="flex items-center justify-between mb-8">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-8">
       <h2 class="font-poppins text-white font-semibold text-[38px]">Your next step starts</h2>
       <button
         class="border border-c-main rounded-md w-[220px] px-4 py-2 text-c-main text-base font-medium font-roboto flex justify-center items-center gap-2 hover:bg-c-main hover:text-white group transition">
@@ -728,7 +704,7 @@ Services
     <div class="space-y-4">
       <!-- Card 1 -->
       <div
-        class="bg-black border border-gray-800 rounded-md px-8 py-6 flex items-center justify-between hover:bg-[#0C111D] hover:border-t-main transition">
+        class="bg-black border border-gray-800 rounded-md px-8 py-6 flex md:items-center flex-col md:flex-row justify-start gap-4 md:gap-0 md:justify-between hover:bg-[#0C111D] hover:border-t-main transition">
         <div>
           <div class="text-sm text-c-main font-roboto font-medium tracking-wide mb-1">Digital Marketing</div>
           <div class="text-white text-xl font-poppins font-regular">Start Learning Digital Marketing</div>
@@ -740,7 +716,7 @@ Services
       </div>
       <!-- Card 2 -->
       <div
-        class="bg-black border border-gray-800 rounded-md px-8 py-6 flex items-center justify-between hover:bg-[#0C111D] hover:border-t-main transition">
+        class="bg-black border border-gray-800 rounded-md px-8 py-6 flex md:items-center flex-col md:flex-row justify-start gap-4 md:gap-0 md:justify-between hover:bg-[#0C111D] hover:border-t-main transition">
         <div>
           <div class="text-sm text-c-main font-roboto font-medium tracking-wide mb-1">IT</div>
           <div class="text-white text-xl font-poppins font-regular">Find IT Support Entry Programs</div>
@@ -752,7 +728,7 @@ Services
       </div>
       <!-- Card 3 -->
       <div
-        class="bg-black border border-gray-800 rounded-md px-8 py-6 flex items-center justify-between hover:bg-[#0C111D] hover:border-t-main transition">
+        class="bg-black border border-gray-800 rounded-md px-8 py-6 flex md:items-center flex-col md:flex-row justify-start gap-4 md:gap-0 md:justify-between hover:bg-[#0C111D] hover:border-t-main transition">
         <div>
           <div class="text-sm text-c-main font-roboto font-medium tracking-wide mb-1">Digital Marketing</div>
           <div class="text-white text-xl font-poppins font-regular">Explore SEO Careers</div>
@@ -764,7 +740,7 @@ Services
       </div>
       <!-- Card 4 (active) -->
       <div
-        class="bg-black border border-gray-800 rounded-md px-8 py-6 flex items-center justify-between hover:bg-[#0C111D] hover:border-t-main transition">
+        class="bg-black border border-gray-800 rounded-md px-8 py-6 flex md:items-center flex-col md:flex-row justify-start gap-4 md:gap-0 md:justify-between hover:bg-[#0C111D] hover:border-t-main transition">
         <div>
           <div class="text-sm text-c-main font-roboto font-medium tracking-wide mb-1">IT</div>
           <div class="text-white text-xl font-poppins font-regular">Discover Cloud Training</div>
@@ -776,7 +752,7 @@ Services
       </div>
       <!-- Card 5 -->
       <div
-        class="bg-black border border-gray-800 rounded-md px-8 py-6 flex items-center justify-between hover:bg-[#0C111D] hover:border-t-main transition">
+        class="bg-black border border-gray-800 rounded-md px-8 py-6 flex md:items-center flex-col md:flex-row justify-start gap-4 md:gap-0 md:justify-between hover:bg-[#0C111D] hover:border-t-main transition">
         <div>
           <div class="text-sm text-c-main font-roboto font-medium tracking-wide mb-1">IT</div>
           <div class="text-white text-xl font-poppins font-regular">Step into Cybersecurity</div>

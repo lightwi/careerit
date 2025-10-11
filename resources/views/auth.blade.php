@@ -5,6 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>@yield('title')</title>
+  <link rel="stylesheet" href="{{ asset('vendor/fontawesome/css/all.min.css') }}">
+  <!-- Load Google Fonts (Poppins + Roboto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <script src="{{ asset('vendor/tailwind/tailwind.min.js') }}"></script>
   @stack('stylelinks')
   @stack('styles')
 
@@ -14,14 +20,30 @@
 
   @yield('content')
 
-  <!-- scripts -->
-  <script src="{{ asset('vendor/tailwind/tailwind.min.js') }}"></script>
-  <script src="{{ asset('vendor/bootstrap/jquery.min.js') }}"></script>
-  <script src="{{ asset('vendor/bootstrap/bootstrap.min.js') }}"></script>
+<!-- scripts -->
+<script src="{{ asset('vendor/bootstrap/alpine.min.js') }}"></script>
 
   <!-- tailwind config -->
-  <script src="{{ asset('vendor/tcConfig.js') }}"></script>
-  <script src="{{ asset('vendor/main.js') }}"></script>
+  <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                        roboto: ['Roboto', 'sans-serif'],
+                    },
+                    colors: {
+                        'b-main': '#FAFAFA',
+                        'c-main': '#F76E40',
+                        't-first': '#00031F',
+                        't-second': '#33354C',
+                        't-white': '#ffffff',
+                    },
+                },
+            },
+        }
+    </script>
 
   @stack('scrlink')
   @stack('scripts')

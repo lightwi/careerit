@@ -10,8 +10,8 @@ Meet Rohit
   <div class="flex flex-col lg:flex-row w-full py-4 sm:py-6 lg:py-8 xl:py-16 2xl:py-20">
     <!-- Text Column -->
     <div class="w-full lg:w-1/2 p-4 sm:p-6 md:p-8 lg:p-0 flex flex-col justify-center mr-4">
-      <span class="font-roboto font-normal text-sm leading-5 tracking-wide text-c-main w-full md:w-fit mb-4">Your SEO
-        Partner That Delivers</span>
+      <p class="font-roboto font-normal text-center md:text-left text-sm leading-5 tracking-wide text-c-main w-full md:w-fit mb-4">Your SEO
+        Partner That Delivers</p>
       <h1 class="font-poppins font-medium text-4xl text-center leading-[50px] my-[14px] tracking-[-1.5%] md:text-[60px] md:text-left md:leading-[64px] md:tracking-[-0.015em] mb-3 sm:mb-4">
         SEO That's Real, <br>
         Results That Last
@@ -73,111 +73,116 @@ Meet Rohit
 
 
 
-<section class="md:px-0 bg-white">
-  <div class="container mx-auto py-4 sm:py-6 lg:py-8 xl:py-16 2xl:py-20">
+<section class="bg-white px-4 md:px-0 autoflow">
+  <div class="container mx-auto py-6 sm:py-8 lg:py-12 xl:py-16 2xl:py-20">
 
-    <span class="font-roboto font-normal text-sm leading-5 tracking-wide text-c-main w-full md:w-fit">Why work with me</span>
+    <!-- Section Header -->
+    <span class="font-roboto font-normal text-sm leading-5 tracking-wide text-c-main block">
+      Why work with me
+    </span>
 
-    <div class="grid grid-cols-2 gap-4">
+    <!-- Main Heading and Short Points -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-4">
       <div>
-        <h2 class="font-poppins font-medium text-t-first text-[36px] leading-[120%] tracking-[-0.04em] mt-4 mb-12">
+        <h2 class="font-poppins font-medium text-t-first text-2xl sm:text-3xl md:text-[36px] leading-[120%] tracking-[-0.04em] mt-2 mb-8">
           Not Just SEO Services. <br> A Trusted Partnership
         </h2>
-
       </div>
 
       <div>
-        <div class="flex items-center gap-3 my-6">
-
-          <span class="w-3 h-3 rounded-full bg-c-main"></span>
-          <span class="font-roboto font-medium text-[18px] leading-none tracking-normal">
+        <div class="flex items-start gap-3 mb-4">
+          <span class="w-3 h-3 mt-1 rounded-full bg-c-main shrink-0"></span>
+          <span class="font-roboto font-medium text-base sm:text-lg leading-snug">
             You’re not just looking for more traffic — you want real growth.
           </span>
-
         </div>
 
-        <div class="flex items-center gap-3">
-
-          <span class="w-3 h-3 rounded-full bg-c-main"></span>
-          <span class="font-roboto font-medium text-[18px] leading-none tracking-normal">
+        <div class="flex items-start gap-3">
+          <span class="w-3 h-3 mt-1 rounded-full bg-c-main shrink-0"></span>
+          <span class="font-roboto font-medium text-base sm:text-lg leading-snug">
             You want calls, conversions, leads — not vanity metrics.
           </span>
-
         </div>
       </div>
     </div>
 
-    <p class="font-roboto font-light text-[20px] leading-[34px] tracking-[0.04em] text-[#33354C]">
+    <!-- Paragraph -->
+    <p class="font-roboto font-light text-base sm:text-lg md:text-[20px] leading-[34px] tracking-[0.04em] text-[#33354C] mt-6">
       I’m Rohit Rajput, the strategist behind CareerIntoIT. I help businesses like yours rank higher, show up better, and win trust through tailored SEO campaigns that are honest, effective, and built to last.
     </p>
 
-    <div x-data="{ active: 1 }" class="grid grid-cols-2 gap-8 mt-6">
+    <!-- Tabbed Content -->
+    <div x-data="{ active: 1 }" class="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-10">
+
       <!-- LEFT SIDE: Buttons -->
       <div>
-        <h4 class="font-roboto text-c-main font-light text-[24px] leading-[30px] tracking-[0.04em]">
+        <h4 class="font-roboto text-c-main font-light text-xl sm:text-2xl leading-[30px] tracking-[0.04em]">
           I bring strategy, clarity, and results.
         </h4>
 
-        <div class="mt-6 space-y-6">
+        <div class="mt-6 space-y-4">
           <!-- Button 1 -->
-          <button type="button" @click="active = 1" :class="active === 1 
-          ? 'bg-c-main text-white' 
-          : 'bg-[#F2F4F7] text-black'" class="w-[80%] px-6 py-4 rounded-full flex items-center gap-6 text-left transition">
-            <div class="w-[66px] h-[66px] rounded-full shadow-xl bg-white flex items-center justify-center">
-              <i class="fas fa-arrow-trend-up text-[32px]" :class="active === 1 ? 'text-c-main' : 'text-gray-500'"></i>
+          <button type="button" @click="active = 1" 
+            :class="active === 1 ? 'bg-c-main text-white' : 'bg-[#F2F4F7] text-black'"
+            class="w-full sm:w-[90%] px-4 py-4 rounded-full flex items-center gap-4 text-left transition">
+            <div class="w-[56px] h-[56px] sm:w-[66px] sm:h-[66px] rounded-full shadow-xl bg-white flex items-center justify-center">
+              <i class="fas fa-arrow-trend-up text-xl sm:text-2xl" :class="active === 1 ? 'text-c-main' : 'text-gray-500'"></i>
             </div>
-            <span class="font-roboto font-medium text-[24px] leading-none tracking-normal">
+            <span class="font-roboto font-medium text-base sm:text-xl leading-none tracking-normal">
               Services Provider
             </span>
           </button>
 
           <!-- Button 2 -->
-          <button type="button" @click="active = 2" :class="active === 2 
-          ? 'bg-c-main text-white' 
-          : 'bg-[#F2F4F7] text-black'" class="w-[80%] px-6 py-4 rounded-full flex items-center gap-6 text-left transition">
-            <div class="w-[66px] h-[66px] rounded-full shadow-xl bg-white flex items-center justify-center">
-              <i class="fas fa-chart-line text-[32px]" :class="active === 2 ? 'text-c-main' : 'text-gray-500'"></i>
+          <button type="button" @click="active = 2" 
+            :class="active === 2 ? 'bg-c-main text-white' : 'bg-[#F2F4F7] text-black'"
+            class="w-full sm:w-[90%] px-4 py-4 rounded-full flex items-center gap-4 text-left transition">
+            <div class="w-[56px] h-[56px] sm:w-[66px] sm:h-[66px] rounded-full shadow-xl bg-white flex items-center justify-center">
+              <i class="fas fa-chart-line text-xl sm:text-2xl" :class="active === 2 ? 'text-c-main' : 'text-gray-500'"></i>
             </div>
-            <span class="font-roboto font-medium text-[24px] leading-none tracking-normal">
+            <span class="font-roboto font-medium text-base sm:text-xl leading-none tracking-normal">
               Digital Marketing
             </span>
           </button>
 
           <!-- Button 3 -->
-          <button type="button" @click="active = 3" :class="active === 3 
-          ? 'bg-c-main text-white' 
-          : 'bg-[#F2F4F7] text-black'" class="w-[80%] px-6 py-4 rounded-full flex items-center gap-6 text-left transition">
-            <div class="w-[66px] h-[66px] rounded-full shadow-xl bg-white flex items-center justify-center">
-              <i class="fas fa-bullhorn text-[32px]" :class="active === 3 ? 'text-c-main' : 'text-gray-500'"></i>
+          <button type="button" @click="active = 3" 
+            :class="active === 3 ? 'bg-c-main text-white' : 'bg-[#F2F4F7] text-black'"
+            class="w-full sm:w-[90%] px-4 py-4 rounded-full flex items-center gap-4 text-left transition">
+            <div class="w-[56px] h-[56px] sm:w-[66px] sm:h-[66px] rounded-full shadow-xl bg-white flex items-center justify-center">
+              <i class="fas fa-bullhorn text-xl sm:text-2xl" :class="active === 3 ? 'text-c-main' : 'text-gray-500'"></i>
             </div>
-            <span class="font-roboto font-medium text-[24px] leading-none tracking-normal">
+            <span class="font-roboto font-medium text-base sm:text-xl leading-none tracking-normal">
               SEO Campaigns
             </span>
           </button>
         </div>
       </div>
 
-      <!-- RIGHT SIDE: Images -->
+      <!-- RIGHT SIDE: Dynamic Images -->
       <div class="flex justify-center items-center">
         <template x-if="active === 1">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLNi2rVEgv0z3CRJ0Gb-hd6X5WefBtlSSWZg&s" class="rounded-xl shadow-lg w-[500px] h-[350px]" alt="Services Image">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLNi2rVEgv0z3CRJ0Gb-hd6X5WefBtlSSWZg&s"
+            class="rounded-xl shadow-lg w-full max-w-[500px] h-auto" alt="Services Image">
         </template>
         <template x-if="active === 2">
-          <img src="https://www.atlanticcouncil.org/wp-content/uploads/2025/03/2024-01-08T000000Z_1522653967_MT1NURPHO000GOY6RP_RTRMADP_3_DEFENSE-DEMOCRACY-DEMONSTRATION-500x350.jpg" class="rounded-xl shadow-lg w-[500px] h-[350px]" alt="Marketing Image">
+          <img src="https://www.atlanticcouncil.org/wp-content/uploads/2025/03/2024-01-08T000000Z_1522653967_MT1NURPHO000GOY6RP_RTRMADP_3_DEFENSE-DEMOCRACY-DEMONSTRATION-500x350.jpg"
+            class="rounded-xl shadow-lg w-full max-w-[500px] h-auto" alt="Marketing Image">
         </template>
         <template x-if="active === 3">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-k87LIXpxt0lRrphKnCv4EL11d8XYqf0OLQ&s" class="rounded-xl shadow-lg w-[500px] h-[350px]" alt="SEO Image">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-k87LIXpxt0lRrphKnCv4EL11d8XYqf0OLQ&s"
+            class="rounded-xl shadow-lg w-full max-w-[500px] h-auto" alt="SEO Image">
         </template>
       </div>
+
     </div>
-
-
   </div>
 </section>
 
 
 
-<section class="container mx-auto md:px-0">
+
+<section class="container mx-auto px-4 md:px-0 autoflow">
   <div class="py-4 sm:py-6 lg:py-8 xl:py-16 2xl:py-20">
 
     <span class="font-roboto font-normal text-sm leading-5 tracking-wide text-c-main w-full md:w-fit">What I Actually
@@ -186,7 +191,7 @@ Meet Rohit
       SEO That Connects Strategy, Search & Sales
     </h2>
 
-    <div class="grid grid-cols-3 gap-6 mb-4">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-4">
 
       <div class="rounded-lg shadow-md px-8 py-12 bg-white">
         <div class="w-12 h-12 rounded-full bg-c-main flex justify-center items-center">
@@ -266,39 +271,39 @@ Meet Rohit
 </section>
 
 
-<section class="relative bg-c-main">
-
-  <img class="absolute left-0" src="{{ asset('assets/graphics/halfcircle.png') }}" width="150px" height="185px" alt="" srcset="">
-  <img class="absolute bottom-0" src="{{ asset('assets/graphics/ecliples.png') }}" alt="" width="475px" height="275px" srcset="">
+<section class="relative bg-c-main autoflow">
+  <!-- Decorative graphics -->
+  <img class="absolute left-0 hidden md:block" src="{{ asset('assets/graphics/halfcircle.png') }}" width="150px" height="185px" alt="" srcset="">
+  <img class="absolute bottom-0 hidden md:block" src="{{ asset('assets/graphics/ecliples.png') }}" alt="" width="475px" height="275px" srcset="">
 
   <!-- Flex container -->
-  <div class="flex flex-col md:flex-row w-full">
-    <!-- Left side - Text content (50%) -->
-    <div class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
-      <div class="ml-20">
-        <p class="font-roboto font-normal text-[16px] leading-[100%] tracking-[0.08em] text-t-main">
+  <div class="flex flex-col md:flex-row w-full relative z-10">
+    
+    <!-- Left side - Text content -->
+    <div class="w-full md:w-1/2 px-6 py-12 sm:px-10 md:px-16 flex items-center">
+      <div class="max-w-xl mx-auto md:ml-12">
+        <p class="font-roboto font-normal text-sm sm:text-base leading-tight tracking-[0.08em] text-t-main">
           How I work
         </p>
-        <h2 class="font-poppins font-medium text-[36px] leading-[100%] tracking-[-0.04em] text-white mt-4">
+        <h2 class="font-poppins font-medium text-2xl sm:text-3xl md:text-[36px] leading-tight tracking-[-0.04em] text-white mt-4">
           Simple. Ethical. Data-Driven.
         </h2>
       </div>
     </div>
 
-    <!-- Right side - Image (50%) -->
-    <div class="w-full md:w-1/2 bg-gray-200 flex items-center justify-center">
-      <!-- Demo image placeholder - replace with your actual image -->
-      <img src="{{ asset('assets/working.jpg') }}" class="w-full h-full object-cover" width="700" height="400" loading="lazy">
+    <!-- Right side - Image -->
+    <div class="w-full md:w-1/2 h-[250px] sm:h-[300px] md:h-auto bg-gray-200 flex items-center justify-center">
+      <img src="{{ asset('assets/working.jpg') }}" alt="Working" class="w-full h-full object-cover" loading="lazy">
     </div>
   </div>
-
 </section>
 
 
-<section class="mx-auto md:px-0">
+
+<section class="mx-auto px-4 md:px-0 autoflow">
   <div class="py-6 sm:py-10 lg:py-16 xl:py-20 2xl:py-24 relative">
 
-    <div class="flex justify-center items-center gap-28 mt-10">
+    <div class="flex flex-col md:flex-row justify-center items-center gap-28 mt-10">
 
       <div class="text-center">
         <div class="w-[86px] h-[86px] rounded-full shadow-xl bg-[#FEF1EC] flex justify-center items-center mx-auto">
@@ -354,7 +359,7 @@ Meet Rohit
 </section>
 
 
-<section class="bg-white">
+<section class="bg-white px-4 md:px-0 autoflow">
 
   <div class="container mx-auto py-6 sm:py-10 lg:py-16 xl:py-20 2xl:py-24">
     <div class="flex flex-col lg:flex-row w-full">
@@ -374,9 +379,9 @@ Meet Rohit
         </button>
       </div>
 
-      <div class="w-full lg:w-1/2">
+      <div class="w-full mt-6 md:mt-0 lg:w-1/2">
 
-        <div class="grid grid-cols-2 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
           <div class="h-[219px] bg-[#025F68] rounded-md relative">
 
@@ -416,7 +421,7 @@ Meet Rohit
 </section>
 
 
-<section>
+<section class="autoflow">
 
   <div class="container text-center mx-auto py-6 sm:py-10 lg:py-16 xl:py-20 2xl:py-24">
     <span class="font-roboto font-normal text-sm leading-5 tracking-wide text-c-main w-full md:w-fit">Software</span>
@@ -424,7 +429,7 @@ Meet Rohit
       Tools I work with
     </h2>
 
-    <div class="flex justify-center items-center gap-10">
+    <div class="flex flex-col md:flex-row justify-center items-center gap-10">
 
       <div class="py-[24px] px-[30px] rounded-lg bg-white shadow-lg">
         <img src="{{ asset('assets/brands/meta.png') }}" alt="" class="w-[93px] h-[18.885px] opacity-100">
@@ -440,7 +445,7 @@ Meet Rohit
 
     </div>
 
-    <div class="flex justify-center items-center gap-10 mt-8">
+    <div class="flex flex-col md:flex-row justify-center items-center gap-10 mt-8">
 
       <div class="py-[24px] px-[30px] rounded-lg bg-white shadow-lg">
         <img src="{{ asset('assets/brands/google_search.png') }}" alt="" class="w-[323px] h-[34.61.885px] opacity-100">
@@ -458,7 +463,7 @@ Meet Rohit
 
 
 <!-- Main Container -->
-<section class="bg-white relative py-6 sm:py-10 lg:py-16 xl:py-20 2xl:py-24">
+<section class="bg-white relative py-6 sm:py-10 lg:py-16 xl:py-20 2xl:py-24 autoflow px-4 md:px-0">
   <div class="container mx-auto grid md:grid-cols-2 gap-12">
 
     <!-- Left Content -->
@@ -479,7 +484,7 @@ Meet Rohit
       </p>
     </div>
 
-    <div class="absolute bg-orange-500 text-white p-8 rounded-2xl shadow-lg max-w-md mx-auto z-10 right-[250px] top-[250px]">
+    <div class="block md:absolute bg-orange-500 text-white p-8 rounded-2xl shadow-lg max-w-md mx-auto z-10 right-[250px] top-[250px]">
       <h3 class="font-poppins font-medium text-[18px] leading-[100%] tracking-[0%] mb-6">
         Apply to Work With Rohit, It only takes 60 seconds
       </h3>
